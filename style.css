@@ -1,0 +1,559 @@
+* {
+    margin: 0%;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #561C24;
+    color: white;
+    font-family: "poppins", serif;
+}
+
+h1 {
+    color: #FFD166;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 40px;
+    height: 80px;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    background-color: #C7B7A3;
+    border-radius: 15px;
+    width: 90px;
+    margin: 0 5px;
+}
+
+.nav-list-left {
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+    border: 1px solid white;
+    border-radius: 25px;
+}
+
+.nav-list-left p {
+    font-size: 1.5rem;
+    color: white;
+    margin: 5px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    list-style: none;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+nav li:hover {
+    transition: all 0.5s ease;
+    color: #381015;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+.firstSection {
+    padding-top: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 600px;
+}
+
+.leftSection,
+.rightSection {
+    height: inherit;
+    width: 100%;
+}
+
+.Piyush {
+    font-size: 4rem;
+}
+
+.web-dev {
+    font-size: 1.723rem;
+}
+
+/* .des {
+    font-size: 1.5rem;
+    color: #FFD166;
+} */
+
+.introdiv {
+    display: flex;
+    justify-content: center;
+    width: 680px;
+    margin: 190px 100px;
+
+    animation: scrollUp 0.8s ease-out;
+}
+
+@keyframes scrollUp {
+    from {
+        transform: translateY(80px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.name {
+    color: #FFD166;
+    font-weight: 500;
+}
+
+.intro-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin: 20px 0;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: #C7B7A3;
+    border-radius: 12px;
+    padding: 5px 12px;
+    text-align: center;
+    color: black;
+    height: 20px;
+    font-size: 1.1rem;
+}
+
+.btn img {
+    height: 20px;
+}
+
+.btn:hover {
+    transition: all 0.5s ease;
+    background-color: #928371;
+}
+
+.btn:hover {
+    transition: all 0.5s ease;
+    background-color: #928371;
+}
+
+.resume:active {
+    transition: all 0.15s ease;
+    transform: scale(0.97);
+}
+
+
+.get-in-touch:active {
+    transition: all 0.15s ease;
+    transform: scale(0.97);
+}
+
+.svgs {
+    height: 10px;
+}
+
+.chr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chr_img {
+    height: 620px;
+    animation: scrollUp 0.8s ease-out;
+}
+
+@keyframes scrollUp {
+    from {
+        transform: translateY(80px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+/* Second Section */
+
+.mh {
+    border: 0;
+    background-color: white;
+    height: 1.2px;
+    margin: 20px 70px;
+}
+
+
+.secondSection {
+    max-width: 90vw;
+    height: 700px;
+    margin: auto;
+}
+
+.topsec {
+    background-color: #6D2932;
+    border-radius: 30px;
+    padding: 10px 30px;
+}
+
+.about-me-para {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.bottomsec {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Education */
+
+.edu1 {
+    margin: 20px 0;
+}
+
+.edu2 {
+    margin-top: 30px;
+}
+
+.edu3 {
+    margin-top: 30px;
+}
+
+.education,
+.skills {
+    background-color: #6D2932;
+    border-radius: 30px;
+    padding: 10px 30px;
+}
+
+.btech {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Hsecondary {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Secondary {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Skills */
+
+.education {
+    width: 750px;
+}
+
+.skills {
+    width: 490px;
+}
+
+
+
+.c-language,
+.Html,
+.CSS,
+.vs-code,
+.github,
+.javascript,
+.sql,
+.mysql {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90px;
+}
+
+.lan-div,
+.tool-div,
+.current-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 15px 0;
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.Languages,
+.Tools,
+.Currently-learning {
+    margin: 10px 0;
+}
+
+
+/* Third Section */
+
+.thirdsection {
+    max-width: 80vw;
+    height: 700px;
+    margin: auto;
+    margin: auto;
+}
+
+.services {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 44px;
+}
+
+.static,
+.styling,
+.bug,
+.optimization {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: rgb(12, 12, 60);
+    border: 1px solid rgb(3, 3, 23);
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 28px;
+    box-shadow: -2px 2px 10px rgb(3, 3, 23);
+    height: 185px;
+}
+
+.static:hover {
+    transition: all 0.5s ease;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.styling:hover {
+    transition: all 0.5s ease;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.bug:hover {
+    transition: all 0.5s ease;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.optimization:hover {
+    transition: all 0.5s ease;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.ser-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(12, 12, 60);
+    border: 1px solid rgb(3, 3, 23);
+    border-radius: 80px;
+    margin-top: 28px;
+    padding: 10px;
+    box-shadow: -2px 2px 10px rgb(3, 3, 23);
+    height: 80px;
+}
+
+.ser-info p {
+    margin: 0 8px;
+    font-size: 0.93rem;
+}
+
+
+
+.extra-services {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 44px;
+}
+
+.extra-services p {
+    margin: 10px;
+    font-size: 0.8rem;
+}
+
+.clean,
+.focus,
+.performance,
+.experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: rgb(12, 12, 60);
+    border: 1px solid rgb(3, 3, 23);
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 28px;
+    box-shadow: -2px 2px 10px rgb(3, 3, 23);
+    height: 185px;
+}
+
+.clean:hover {
+    transition: all 0.5s ease;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.focus:hover {
+    transition: all 0.5s ease;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.performance:hover {
+    transition: all 0.5s ease;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.experience:hover {
+    transition: all 0.5s ease;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+/* Fourth section */
+
+
+.fourthsection {
+    max-width: 80vw;
+    height: 700px;
+    margin: auto;
+    margin: auto;
+}
+
+.projects {
+    display: flex;
+    justify-content: start;
+    gap: 100px;
+    margin: 20px 50px;
+}
+
+.projects p {
+    font-size: 1rem;
+}
+
+.e-library,
+.memify {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 555px;
+    width: 350px;
+    background-color: rgb(12, 12, 60);
+    border-radius: 20px;
+    gap: 20px;
+}
+
+.e-library:hover {
+    transition: all 0.5s ease;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.projects-img {
+    height: 290px;
+    border-radius: 20px;
+}
+
+.projects-p {
+    margin: 0 25px;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.projects-img {
+    height: 290px;
+    border-radius: 20px;
+}
+
+.elib-link {
+    color: blue;
+    margin-top: 5px;
+}
+
+/* Footer */
+
+footer {
+    background-color: rgb(2, 2, 37);
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    margin: 28px 50px;
+}
+
+.slogan,
+.notice {
+    text-align: center;
+    font-size: 1.9rem;
+    margin-bottom: 35px;
+    font-weight: 600;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: 5px 60px;
+    font-size: 14px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 5px 0;
+}
+
+.footer-h {
+    height: 1px;
+    margin: 0 30px;
+    background-color: white;
+    border: 0;
+}
