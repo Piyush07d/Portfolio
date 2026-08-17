@@ -93,7 +93,7 @@ section {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 600px;
+    height: 620px;
 }
 
 .leftSection,
@@ -192,7 +192,8 @@ section {
 .chr {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    height: 100%;
 }
 
 .chr_img {
@@ -218,7 +219,7 @@ section {
     border: 0;
     background-color: white;
     height: 1.2px;
-    margin: 20px 70px;
+    margin: 0 70px 20px;
 }
 
 
@@ -679,7 +680,11 @@ footer {
     border: 0;
 }
 
-/* Responsive Design */
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Smaller desktop / laptop */
 @media (max-width: 1100px) {
     nav {
         margin: 0 25px;
@@ -687,15 +692,12 @@ footer {
 
     .introdiv {
         width: auto;
-        margin: 150px 50px;
+        margin-left: 50px;
+        margin-right: 50px;
     }
 
     .chr_img {
-        height: 520px;
-    }
-
-    .bottomsec {
-        gap: 20px;
+        max-width: 100%;
     }
 
     .education {
@@ -703,11 +705,10 @@ footer {
     }
 
     .skills {
-        width: 40%;
+        width: 35%;
     }
 
     .service-box {
-        flex-wrap: wrap;
         gap: 20px;
     }
 
@@ -719,55 +720,92 @@ footer {
     }
 
     .project {
-        margin: 30px 0;
-        justify-content: center;
-    }
-
-    .topfoot {
-        margin: 28px 25px 0 25px;
-    }
-
-    .leftfoot,
-    .rightfoot {
-        padding-left: 25px;
-        padding-right: 25px;
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 
+/* Tablet */
 @media (max-width: 800px) {
+    /*
+       Navbar becomes two clean rows:
+       logo on top, links underneath.
+       This prevents the links from collapsing.
+    */
     nav {
+        height: auto;
+        min-height: 80px;
         margin: 0 15px;
+        padding: 10px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    .nav-list-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-shrink: 0;
     }
 
     .nav-list-left p {
         font-size: 1.2rem;
         margin: 5px 15px;
+        white-space: nowrap;
+    }
+
+    nav ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 5px;
     }
 
     nav li {
-        margin: 0 8px;
+        margin: 0 6px;
+        white-space: nowrap;
+    }
+
+    .nav-list {
+        width: auto;
+        min-width: 0;
+        margin: 0;
+    }
+
+    section {
+        scroll-margin-top: 110px;
     }
 
     .firstSection {
         height: auto;
         min-height: 700px;
+        padding-top: 110px;
+        padding-bottom: 0;
         flex-direction: column;
     }
 
     .leftSection,
     .rightSection {
-        width: 100%;
         height: auto;
+        width: 100%;
     }
 
     .introdiv {
         width: auto;
-        margin: 100px 30px 30px;
+        margin: 50px 30px 30px;
+    }
+
+    .chr {
+        width: 100%;
+        height: auto;
     }
 
     .chr_img {
         height: 430px;
-        max-width: 100%;
+        max-width: 90%;
     }
 
     .secondSection,
@@ -778,6 +816,7 @@ footer {
 
     .bottomsec {
         flex-direction: column;
+        gap: 25px;
     }
 
     .education,
@@ -789,6 +828,7 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
+        gap: 25px;
     }
 
     .how-i-work {
@@ -796,60 +836,103 @@ footer {
     }
 
     .project {
-        flex-direction: column;
-        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
         margin: 30px 0;
     }
 
-    .e-library,
-    .portfolio {
-        width: min(400px, 100%);
-        box-sizing: border-box;
-    }
-
     .topfoot {
-        flex-direction: column;
-        gap: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .bottomfoot {
-        flex-direction: column;
-        align-items: center;
+        gap: 20px;
     }
 
     .leftfoot,
     .rightfoot {
         width: auto;
-        padding: 10px 20px;
-    }
-
-    .rightfoot {
-        flex-direction: row;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
-@media (max-width: 550px) {
+/* Android phones */
+@media (max-width: 600px) {
+    body {
+        overflow-x: hidden;
+    }
+
     nav {
+        width: calc(100% - 20px);
+        min-height: 82px;
         margin: 0 10px;
+        padding: 8px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 3px;
+        box-sizing: border-box;
+    }
+
+    /* Logo gets its own full row */
+    .nav-list-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-shrink: 0;
     }
 
     .nav-list-left p {
         font-size: 1rem;
-        margin: 5px 10px;
+        margin: 4px 10px;
+        white-space: nowrap;
+    }
+
+    /* Links get their own row and never shrink */
+    nav ul {
+        width: 100%;
+        flex: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 0;
+        min-width: 0;
     }
 
     nav li {
-        margin: 0 5px;
-        font-size: 0.9rem;
+        margin: 0 15px;
+        padding: 0;
+        font-size: 0.82rem;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .nav-list {
+        width: auto;
+        min-width: 0;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    section {
+        scroll-margin-top: 100px;
     }
 
     .firstSection {
-        padding-top: 80px;
-        min-height: 650px;
+        min-height: 0;
+        height: auto;
+        padding-top: 105px;
+        padding-bottom: 0;
     }
 
     .introdiv {
-        margin: 80px 20px 20px;
+        width: auto;
+        margin: 40px 20px 25px;
     }
 
     .Piyush {
@@ -863,22 +946,46 @@ footer {
     .intro-btn {
         width: 100%;
         max-width: 350px;
+        gap: 10px;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    .chr {
+        width: 100%;
+        height: auto;
+        align-items: flex-end;
     }
 
     .chr_img {
+        display: block;
+        width: auto;
         height: auto;
-        max-height: 380px;
         max-width: 90%;
+        max-height: 380px;
     }
 
     .mh {
-        margin: 20px 25px;
+        margin: 0 25px 20px;
+    }
+
+    .secondSection,
+    .thirdsection,
+    .fourthsection {
+        max-width: calc(100% - 30px);
+        width: auto;
     }
 
     .topsec,
     .education,
     .skills {
-        padding: 10px 20px;
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .about-me-para {
@@ -891,21 +998,47 @@ footer {
         gap: 15px;
     }
 
+    .education,
+    .skills {
+        width: 100%;
+    }
+
     .lan-div,
     .tool-div,
     .current-div {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+    }
+
+    .c-language,
+    .Html,
+    .CSS,
+    .vs-code,
+    .github,
+    .javascript,
+    .sql,
+    .mysql {
+        width: 100%;
     }
 
     .service-box {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .website-development,
     .ui-design,
     .bug-fixing,
     .website-optimization {
-        width: min(250px, 100%);
+        width: 100%;
+        max-width: 250px;
+        box-sizing: border-box;
+    }
+
+    .number,
+    .number1 {
+        left: auto;
+        right: 0;
     }
 
     .how-i-work {
@@ -915,11 +1048,19 @@ footer {
 
     .how-i-work hr {
         width: 80%;
+        max-width: 300px;
+    }
+
+    .project {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
     .e-library,
     .portfolio {
         width: 100%;
+        box-sizing: border-box;
     }
 
     .e-library img,
@@ -928,17 +1069,148 @@ footer {
         max-width: 100%;
     }
 
+    .visitwebsitehash {
+        top: 0;
+    }
+
+    .topfoot {
+        flex-direction: column;
+        gap: 10px;
+    }
+
     .slogan,
     .notice {
         font-size: 1.5rem;
     }
 
+    .bottomfoot {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
     .leftfoot,
     .rightfoot {
+        width: 100%;
+        box-sizing: border-box;
         padding: 10px;
+    }
+
+    .rightfoot {
+        flex-direction: row;
+        justify-content: center;
     }
 
     .connect {
         width: auto;
     }
+
+    .footer-h {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/* Small Android phones */
+@media (max-width: 420px) {
+    nav {
+        min-height: 80px;
+        margin: 0 7px;
+    }
+
+    .nav-list-left p {
+        font-size: 0.9rem;
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+
+    nav li {
+        margin: 0 15px;
+        font-size: 0.72rem;
+    }
+
+    .Piyush {
+        font-size: 2.3rem;
+    }
+
+    .web-dev {
+        font-size: 1.1rem;
+    }
+
+    .intro-btn {
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .btn {
+        width: fit-content;
+    }
+
+    .btech,
+    .Hsecondary,
+    .Secondary {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .lan-div,
+    .tool-div,
+    .current-div {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 15px;
+    }
+}
+
+/* =========================
+   TOUCH DEVICES
+   Disable hover effects on phones/tablets
+   ========================= */
+
+@media (hover: none), (pointer: coarse) {
+    .nav-list:hover {
+        transition: none;
+        transform: none;
+    }
+
+    .btn:hover {
+        transition: none;
+        background-color: #C7B7A3;
+    }
+
+    .website-development:hover,
+    .ui-design:hover,
+    .bug-fixing:hover,
+    .website-optimization:hover,
+    .e-library:hover,
+    .portfolio:hover {
+        transition: none;
+        transform: none;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+        cursor: default;
+    }
+
+    .project a:hover {
+        transition: none;
+        color: white;
+    }
+
+    .visitwebsite:hover,
+    .visitwebsitehash:hover {
+        transition: none;
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+/* Remove Android tap highlight without changing the button design */
+a,
+button,
+nav li,
+.nav-list,
+.btn {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a:focus,
+button:focus {
+    outline: none;
 }
