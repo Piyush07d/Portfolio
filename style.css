@@ -82,6 +82,7 @@ nav li {
 .nav-list:hover {
     transition: all 0.5s ease;
     transform: translateY(-2px);
+    background-color: #ddcfbd;
 }
 
 section {
@@ -166,12 +167,7 @@ section {
 
 .btn:hover {
     transition: all 0.5s ease;
-    background-color: #928371;
-}
-
-.btn:hover {
-    transition: all 0.5s ease;
-    background-color: #928371;
+    background-color: #ddcfbd;
 }
 
 .resume:active {
@@ -369,28 +365,29 @@ section {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
-.website-development:hover{
+
+.website-development:hover {
     transition: all 0.3s ease;
     transform: translateY(-10px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
-.ui-design:hover{
+.ui-design:hover {
     transition: all 0.3s ease;
     transform: translateY(-10px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
-.bug-fixing:hover{
+.bug-fixing:hover {
     transition: all 0.3s ease;
     transform: translateY(-10px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
-.website-optimization:hover{
+.website-optimization:hover {
     transition: all 0.3s ease;
     transform: translateY(-10px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
@@ -466,14 +463,14 @@ section {
     color: #FFD166;
 }
 
-.e-library:hover{
+.e-library:hover {
     transition: all 0.3s ease;
     transform: translateY(-10px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
     cursor: pointer;
 }
 
-.portfolio:hover{
+.portfolio:hover {
     transition: all 0.3s ease;
     transform: translateY(-10px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
@@ -561,110 +558,101 @@ section {
 
 footer {
     background-color: #3A1218;
-    padding: 0 20px;
+
 }
 
-.contact {
+.main-footer {
+    display: flex;
+    justify-content: center;
+    gap: 345px;
+    height: 280px;
+}
+
+.left-foot {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 40px 107px;
+    width: 345px;
 }
 
-.topfoot {
+.conimg{
+    background-color: #561C24;
+    border-radius: 50%;
+    padding: 10px;
+    height: 20px;
+    width: 20px;
     display: flex;
-    justify-content: space-between;
-    margin: 28px 50px 0 50px;
+    justify-content: center;
+    align-items: center;
 }
 
-.slogan,
-.notice {
-    text-align: left;
-    font-size: 1.9rem;
-    font-weight: 600;
-    color: #FFD166;
-}
-
-.gh {
-    border: 0;
-    background-color: #FFD166;
-    height: 1.5px;
-    margin-top: 10px;
-    width: 150px;
-}
-
-.bottomfoot {
+.right-foot {
     display: flex;
-    justify-content: space-between;
-    height: fit-content;
+    flex-direction: column;
+    justify-content: right;
+    justify-content: space-around;
+    padding: 50px 107px;
+    width: 345px;
 }
 
-.leftfoot {
-    padding: 10px 50px;
-    width: 350px;
-}
-
-.leftfoot a {
-    text-decoration: none;
+.left-foot a {
     color: white;
 }
 
-.mail,
-.telephone,
-.location {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    margin: 20px 0;
-}
-
-.fh{
-    border: 0;
-    background-color: white;
-    height: 0.1px;
-}
-
-.footicon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #6D2932;
-    border-radius: 50%;
-    padding: 5px;
-    height: 30px;
-    width: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-}
-
-.footicon img {
-    justify-content: center;
-    align-items: center;
+.left-foot img {
     height: 25px;
     filter: brightness(0) invert(1);
 }
 
-.rightfoot {
+.mobile,
+.gmail,
+.location {
     display: flex;
-    flex-direction: row-reverse;
-    padding: 10px 55px;
-    width: 350px;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}
+
+.gmail h3:hover{
+    transition: all 0.5s ease;
+    color: #FFD166;
+
+}
+
+.mobile h3:hover{
+    transition: all 0.5s ease;
+    color: #FFD166;
+
+}
+
+.location h3:hover{
+    transition: all 0.5s ease;
+    color: #FFD166;
+    cursor: pointer;
+}
+
+.freelance{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.social-links{
+    display: flex;
+    flex-direction: row;
     gap: 20px;
 }
 
-.linkedinlink,
-.githublink {
-    display: flex;
-    flex-direction: column-reverse;
+.social-links a:hover{
+    transition: all 0.3s ease;
+    transform: scale(1.1);
 }
 
-.linkedinlink img,
-.githublink img {
-    height: 50px;
-}
-
-.connect {
-    text-align: left;
-    width: 200px;
-    margin: 20px 0;
+.social-links img {
+    height: 40px;
+    
 }
 
 .copyright {
@@ -680,159 +668,72 @@ footer {
     border: 0;
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-   ========================= */
 
-/* Smaller desktop / laptop */
-@media (max-width: 1100px) {
+/* =========================================================
+   RESPONSIVE DESIGN
+   Desktop styles above remain unchanged.
+   These rules only apply to smaller screens.
+   ========================================================= */
+
+/* Tablets, iPads and smaller laptops */
+@media (max-width: 1200px) {
+
     nav {
         margin: 0 25px;
     }
 
-    .introdiv {
-        width: auto;
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-
-    .chr_img {
-        max-width: 100%;
-    }
-
-    .education {
-        width: 60%;
-    }
-
-    .skills {
-        width: 35%;
-    }
-
-    .service-box {
-        gap: 20px;
-    }
-
-    .website-development,
-    .ui-design,
-    .bug-fixing,
-    .website-optimization {
-        width: 220px;
-    }
-
-    .project {
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
-
-/* Tablet */
-@media (max-width: 800px) {
-    /*
-       Navbar becomes two clean rows:
-       logo on top, links underneath.
-       This prevents the links from collapsing.
-    */
-    nav {
-        height: auto;
-        min-height: 80px;
-        margin: 0 15px;
-        padding: 10px 0;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
-    }
-
-    .nav-list-left {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        flex-shrink: 0;
-    }
-
-    .nav-list-left p {
-        font-size: 1.2rem;
-        margin: 5px 15px;
-        white-space: nowrap;
-    }
-
-    nav ul {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: nowrap;
-        gap: 5px;
-    }
-
-    nav li {
-        margin: 0 6px;
-        white-space: nowrap;
-    }
-
-    .nav-list {
-        width: auto;
-        min-width: 0;
-        margin: 0;
-    }
-
-    section {
-        scroll-margin-top: 110px;
-    }
-
     .firstSection {
         height: auto;
-        min-height: 700px;
-        padding-top: 110px;
-        padding-bottom: 0;
-        flex-direction: column;
-    }
-
-    .leftSection,
-    .rightSection {
-        height: auto;
-        width: 100%;
+        min-height: 620px;
+        padding-bottom: 40px;
     }
 
     .introdiv {
         width: auto;
-        margin: 50px 30px 30px;
+        margin: 160px 50px 60px;
     }
 
-    .chr {
-        width: 100%;
-        height: auto;
+    .Piyush {
+        font-size: 3.5rem;
     }
 
     .chr_img {
-        height: 430px;
-        max-width: 90%;
+        height: 560px;
     }
 
     .secondSection,
     .thirdsection,
     .fourthsection {
         height: auto;
+        min-height: 0;
+        padding-bottom: 50px;
     }
 
     .bottomsec {
-        flex-direction: column;
         gap: 25px;
     }
 
     .education,
     .skills {
         width: auto;
+        flex: 1;
     }
 
     .service-box {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
+        grid-template-columns: repeat(2, minmax(250px, 1fr));
         gap: 25px;
     }
 
+    .website-development,
+    .ui-design,
+    .bug-fixing,
+    .website-optimization {
+        width: auto;
+    }
+
     .how-i-work {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .project {
@@ -841,155 +742,140 @@ footer {
         margin: 30px 0;
     }
 
-    .topfoot {
-        margin-left: 20px;
-        margin-right: 20px;
+    .main-footer {
+        gap: 80px;
     }
 
-    .bottomfoot {
-        gap: 20px;
-    }
-
-    .leftfoot,
-    .rightfoot {
-        width: auto;
-        padding-left: 20px;
-        padding-right: 20px;
+    .left-foot,
+    .right-foot {
+        padding-left: 50px;
+        padding-right: 50px;
     }
 }
 
-/* Android phones */
-@media (max-width: 600px) {
-    body {
-        overflow-x: hidden;
-    }
 
+/* Phones and small tablets */
+@media (max-width: 768px) {
+
+    /* Navigation */
     nav {
-        width: calc(100% - 20px);
-        min-height: 82px;
-        margin: 0 10px;
-        padding: 8px 0;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 3px;
-        box-sizing: border-box;
+        margin: 0 12px;
+        height: 70px;
+        gap: 8px;
     }
 
-    /* Logo gets its own full row */
     .nav-list-left {
-        width: 100%;
-        display: flex;
-        justify-content: center;
         flex-shrink: 0;
     }
 
     .nav-list-left p {
-        font-size: 1rem;
-        margin: 4px 10px;
-        white-space: nowrap;
+        font-size: 1.15rem;
+        margin: 5px 12px;
     }
 
-    /* Links get their own row and never shrink */
     nav ul {
-        width: 100%;
-        flex: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         flex-wrap: nowrap;
-        gap: 0;
+        gap: 3px;
         min-width: 0;
     }
 
     nav li {
-        margin: 0 15px;
-        padding: 0;
-        font-size: 0.82rem;
+        margin: 0 3px;
         white-space: nowrap;
-        flex-shrink: 0;
     }
 
     .nav-list {
         width: auto;
         min-width: 0;
         margin: 0;
-        flex-shrink: 0;
+        padding: 0 5px;
+        box-sizing: border-box;
     }
 
-    section {
-        scroll-margin-top: 100px;
-    }
-
+    /* Hero section */
     .firstSection {
-        min-height: 0;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 80px;
+        min-height: auto;
+    }
+
+    .leftSection,
+    .rightSection {
+        width: 100%;
         height: auto;
-        padding-top: 105px;
-        padding-bottom: 0;
     }
 
     .introdiv {
         width: auto;
-        margin: 40px 20px 25px;
+        margin: 70px 20px 30px;
+        justify-content: center;
     }
 
     .Piyush {
-        font-size: 2.7rem;
+        font-size: clamp(2.3rem, 9vw, 3.5rem);
     }
 
     .web-dev {
-        font-size: 1.3rem;
+        font-size: clamp(1.2rem, 5vw, 1.723rem);
     }
 
     .intro-btn {
         width: 100%;
         max-width: 350px;
-        gap: 10px;
+        margin: 20px auto;
+        gap: 12px;
     }
 
     .btn {
-        font-size: 0.95rem;
-        padding-left: 9px;
-        padding-right: 9px;
+        flex: 1;
+        font-size: 1rem;
     }
 
     .chr {
-        width: 100%;
         height: auto;
-        align-items: flex-end;
+        margin-top: 20px;
     }
 
     .chr_img {
-        display: block;
-        width: auto;
-        height: auto;
-        max-width: 90%;
-        max-height: 380px;
+        height: min(500px, 75vw);
+        max-width: 90vw;
+        object-fit: contain;
+    }
+
+    /* Section headings / dividers */
+    section {
+        scroll-margin-top: 70px;
     }
 
     .mh {
         margin: 0 25px 20px;
     }
 
-    .secondSection,
-    .thirdsection,
-    .fourthsection {
-        max-width: calc(100% - 30px);
-        width: auto;
+    /* About + education + skills */
+    .secondSection {
+        max-width: 90vw;
     }
 
-    .topsec,
-    .education,
-    .skills {
-        box-sizing: border-box;
-        padding-left: 20px;
-        padding-right: 20px;
+    .topsec {
+        padding: 10px 20px;
     }
 
     .about-me-para {
         font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .bottomsec {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .education,
+    .skills {
+        width: auto;
+        padding: 10px 20px;
     }
 
     .btech,
@@ -998,16 +884,11 @@ footer {
         gap: 15px;
     }
 
-    .education,
-    .skills {
-        width: 100%;
-    }
-
     .lan-div,
     .tool-div,
     .current-div {
         grid-template-columns: repeat(3, 1fr);
-        column-gap: 10px;
+        gap: 15px 5px;
     }
 
     .c-language,
@@ -1021,6 +902,11 @@ footer {
         width: 100%;
     }
 
+    /* Services */
+    .thirdsection {
+        max-width: 90vw;
+    }
+
     .service-box {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -1030,9 +916,8 @@ footer {
     .ui-design,
     .bug-fixing,
     .website-optimization {
-        width: 100%;
-        max-width: 250px;
-        box-sizing: border-box;
+        width: auto;
+        height: 320px;
     }
 
     .number,
@@ -1051,85 +936,103 @@ footer {
         max-width: 300px;
     }
 
+    /* Projects */
+    .fourthsection {
+        max-width: 90vw;
+    }
+
     .project {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        margin: 30px 0;
     }
 
     .e-library,
     .portfolio {
-        width: 100%;
+        width: auto;
+        max-width: 400px;
         box-sizing: border-box;
     }
 
     .e-library img,
     .portfolio img {
-        height: auto;
-        max-width: 100%;
-    }
-
-    .visitwebsitehash {
-        top: 0;
-    }
-
-    .topfoot {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .slogan,
-    .notice {
-        font-size: 1.5rem;
-    }
-
-    .bottomfoot {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .leftfoot,
-    .rightfoot {
         width: 100%;
-        box-sizing: border-box;
-        padding: 10px;
+        height: auto;
+        max-height: 181px;
+        object-fit: cover;
     }
 
-    .rightfoot {
-        flex-direction: row;
+    /* Footer */
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        height: auto;
+    }
+
+    .left-foot,
+    .right-foot {
+        width: auto;
+        max-width: 400px;
+        padding: 30px 20px;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .mobile,
+    .gmail,
+    .location {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .freelance {
         justify-content: center;
     }
 
-    .connect {
-        width: auto;
+    .social-links {
+        justify-content: center;
+    }
+
+    .copyright {
+        padding: 0 15px;
+        line-height: 1.5;
     }
 
     .footer-h {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin: 0 20px;
     }
 }
 
-/* Small Android phones */
-@media (max-width: 420px) {
+
+/* Small Android / iPhone screens */
+@media (max-width: 480px) {
+
     nav {
-        min-height: 80px;
-        margin: 0 7px;
+        margin: 0 10px;
     }
 
     .nav-list-left p {
-        font-size: 0.9rem;
-        margin-left: 7px;
-        margin-right: 7px;
+        font-size: 1rem;
+        margin: 5px 10px;
     }
 
     nav li {
-        margin: 0 15px;
-        font-size: 0.72rem;
+        margin: 0 4px;
+        font-size: 0.9rem;
+    }
+
+    .nav-list {
+        min-width: 55px;
+    }
+
+    .introdiv {
+        margin: 60px 15px 25px;
     }
 
     .Piyush {
-        font-size: 2.3rem;
+        font-size: clamp(2rem, 11vw, 2.8rem);
     }
 
     .web-dev {
@@ -1137,80 +1040,319 @@ footer {
     }
 
     .intro-btn {
-        flex-direction: column;
-        width: fit-content;
+        max-width: 320px;
     }
 
     .btn {
-        width: fit-content;
+        font-size: 0.9rem;
+        padding: 5px 8px;
+    }
+
+    .btn img {
+        height: 18px;
+    }
+
+    .chr_img {
+        height: min(420px, 85vw);
+    }
+
+    .topsec,
+    .education,
+    .skills {
+        border-radius: 22px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .about-me-para {
+        font-size: 0.95rem;
     }
 
     .btech,
     .Hsecondary,
     .Secondary {
+        font-size: 0.9rem;
+    }
+
+    .lan-div,
+    .tool-div,
+    .current-div {
+        gap: 15px 2px;
+    }
+
+    .skill-icon,
+    .clang-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .website-development,
+    .ui-design,
+    .bug-fixing,
+    .website-optimization {
+        height: auto;
+        min-height: 320px;
+    }
+
+    .points {
+        margin-left: 5px;
+    }
+
+    .e-library,
+    .portfolio {
+        padding: 15px;
+    }
+
+    .visitwebsitehash {
+        position: static;
+        margin-top: 15px;
+    }
+
+    .left-foot,
+    .right-foot {
+        width: 100%;
+        padding: 25px 15px;
+    }
+
+    .mobile,
+    .gmail,
+    .location {
+        gap: 12px;
+        font-size: 0.9rem;
+    }
+
+    .social-links img {
+        height: 35px;
+    }
+}
+
+
+/* Very small phones */
+@media (max-width: 360px) {
+
+    nav {
+        margin: 0 5px;
+    }
+
+    nav li {
+        margin: 0 2px;
+        font-size: 0.8rem;
+    }
+
+    .nav-list-left p {
+        font-size: 0.9rem;
+        margin: 5px 7px;
+    }
+
+    .intro-btn {
         flex-direction: column;
-        gap: 3px;
+        width: 90%;
+    }
+
+    .btn {
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .lan-div,
     .tool-div,
     .current-div {
         grid-template-columns: repeat(2, 1fr);
-        row-gap: 15px;
     }
 }
 
-/* =========================
-   TOUCH DEVICES
-   Disable hover effects on phones/tablets
-   ========================= */
 
-@media (hover: none), (pointer: coarse) {
-    .nav-list:hover {
-        transition: none;
-        transform: none;
+/* =========================================================
+   Final mobile alignment fixes
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Keep project buttons inside their cards */
+    .e-library,
+    .portfolio {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: hidden;
     }
 
-    .btn:hover {
-        transition: none;
-        background-color: #C7B7A3;
+    .e-library p,
+    .portfolio p,
+    .pro-des {
+        width: 100%;
+        box-sizing: border-box;
     }
 
+    .visitwebsite,
+    .visitwebsitehash {
+        position: static;
+        margin-top: 12px;
+        box-sizing: border-box;
+    }
+
+    /* Footer: preserve the desktop grouping, but stack
+       the two groups cleanly instead of stretching them. */
+    footer {
+        overflow: hidden;
+    }
+
+    .main-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        height: auto;
+    }
+
+    .left-foot,
+    .right-foot {
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+        padding: 28px 25px;
+        align-items: flex-start;
+    }
+
+    .left-foot {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .right-foot {
+        justify-content: center;
+        gap: 18px;
+    }
+
+    .mobile,
+    .gmail,
+    .location {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .freelance {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    /* Keep all navbar items on one row.
+       Scale them instead of allowing the navbar to collapse. */
+    nav {
+        margin: 0 8px;
+        gap: 5px;
+        height: 65px;
+    }
+
+    .nav-list-left p {
+        font-size: 0.95rem;
+        margin: 5px 8px;
+    }
+
+    nav ul {
+        gap: 1px;
+    }
+
+    nav li {
+        margin: 0 1px;
+        font-size: 0.78rem;
+    }
+
+    .nav-list {
+        padding: 0 4px;
+        border-radius: 12px;
+    }
+
+    /* Footer gets a little more breathing room on phones */
+    .left-foot,
+    .right-foot {
+        padding: 25px 18px;
+    }
+
+    .mobile,
+    .gmail,
+    .location {
+        gap: 12px;
+    }
+
+    .social-links {
+        gap: 15px;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    nav {
+        margin: 0 5px;
+        gap: 3px;
+    }
+
+    .nav-list-left p {
+        font-size: 0.85rem;
+        margin: 5px 6px;
+    }
+
+    nav li {
+        font-size: 0.68rem;
+    }
+
+    .nav-list {
+        padding: 0 2px;
+    }
+
+    .left-foot,
+    .right-foot {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/* =========================================================
+   Touch devices:
+   Keep the desktop hover animations for mouse devices,
+   but prevent sticky hover effects after tapping on phones.
+   ========================================================= */
+@media (hover: none) and (pointer: coarse) {
+
+    .nav-list:hover,
+    .btn:hover,
     .website-development:hover,
     .ui-design:hover,
     .bug-fixing:hover,
     .website-optimization:hover,
     .e-library:hover,
-    .portfolio:hover {
-        transition: none;
-        transform: none;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
-        cursor: default;
+    .portfolio:hover,
+    .visitwebsite:hover,
+    .visitwebsitehash:hover,
+    .social-links a:hover {
+        transform: none !important;
     }
 
-    .project a:hover {
-        transition: none;
-        color: white;
+    .nav-list:hover {
+        background-color: #C7B7A3 !important;
     }
 
+    .btn:hover {
+        background-color: #C7B7A3 !important;
+    }
+
+    .project a:hover,
+    .gmail h3:hover,
+    .mobile h3:hover,
+    .location h3:hover,
     .visitwebsite:hover,
     .visitwebsitehash:hover {
-        transition: none;
-        color: white;
-        border: 1px solid white;
+        color: inherit;
     }
-}
-
-/* Remove Android tap highlight without changing the button design */
-a,
-button,
-nav li,
-.nav-list,
-.btn {
-    -webkit-tap-highlight-color: transparent;
-}
-
-a:focus,
-button:focus {
-    outline: none;
 }
