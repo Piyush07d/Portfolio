@@ -1356,3 +1356,1003 @@ footer {
         color: inherit;
     }
 }
+
+/* =========================================================
+   FINAL FIX
+   1. Service cards keep their original desktop dimensions.
+   2. Navbar stays in one row on phones.
+   ========================================================= */
+
+/* Never resize/collapse the service cards on smaller screens */
+@media (max-width: 768px) {
+
+    .service-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .website-development,
+    .ui-design,
+    .bug-fixing,
+    .website-optimization {
+        flex: 0 0 250px;
+        width: 250px;
+        height: 320px;
+        padding: 15px 20px;
+        box-sizing: content-box;
+    }
+
+    /* Keep the numbers exactly in the same coordinate system */
+    .number,
+    .number1 {
+        position: relative;
+        width: fit-content;
+    }
+}
+
+
+/* Navbar: one clean row, with visible spacing between buttons */
+@media (max-width: 768px) {
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 0 10px;
+        gap: 12px;
+        overflow: visible;
+    }
+
+    .nav-list-left {
+        flex-shrink: 1;
+        white-space: nowrap;
+    }
+
+    .nav-list-left p {
+        white-space: nowrap;
+    }
+
+    nav ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
+    nav li {
+        margin: 0;
+        flex-shrink: 1;
+        white-space: nowrap;
+    }
+
+    .nav-list {
+        width: auto;
+        min-width: 0;
+        margin: 0;
+        padding: 0 8px;
+        box-sizing: border-box;
+        white-space: nowrap;
+    }
+}
+
+
+/* Smaller phones: compact the navbar instead of wrapping/hiding items */
+@media (max-width: 480px) {
+
+    nav {
+        margin: 0 7px;
+        gap: 6px;
+    }
+
+    .nav-list-left p {
+        font-size: 0.9rem;
+        margin: 5px 7px;
+    }
+
+    nav ul {
+        gap: 6px;
+    }
+
+    nav li {
+        font-size: 0.75rem;
+    }
+
+    .nav-list {
+        padding: 0 6px;
+        border-radius: 12px;
+    }
+}
+
+
+/* Very small phones */
+@media (max-width: 360px) {
+
+    nav {
+        margin: 0 5px;
+        gap: 4px;
+    }
+
+    .nav-list-left p {
+        font-size: 0.78rem;
+        margin: 5px 5px;
+    }
+
+    nav ul {
+        gap: 4px;
+    }
+
+    nav li {
+        font-size: 0.65rem;
+    }
+
+    .nav-list {
+        padding: 0 4px;
+    }
+}
+
+/* =========================================================
+   DEFINITIVE MOBILE FIX
+   Keep the original card geometry and original number positions.
+   Do not shrink, resize, or reposition service cards.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* SERVICES: exact original card size */
+    .service-box {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 25px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 10px 5px 20px;
+        scrollbar-width: none;
+    }
+
+    .service-box::-webkit-scrollbar {
+        display: none;
+    }
+
+    .website-development,
+    .ui-design,
+    .bug-fixing,
+    .website-optimization {
+        flex: 0 0 250px;
+        width: 250px;
+        height: 320px;
+        padding: 15px 20px;
+        box-sizing: content-box;
+    }
+
+    /* IMPORTANT:
+       Do not modify .number / .number1 on mobile.
+       Their original top/left values remain untouched. */
+    .number,
+    .number1 {
+        position: relative;
+        top: -82px;
+        width: fit-content;
+    }
+
+    .number {
+        left: 211px;
+        right: auto;
+    }
+
+    .number1 {
+        left: 227px;
+        right: auto;
+    }
+
+
+    /* =====================================================
+       NAVBAR
+       Keep the original navbar style.
+       On narrow screens the complete navbar can scroll
+       horizontally instead of collapsing/hiding buttons.
+       ===================================================== */
+
+    nav {
+        height: 80px;
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 15px;
+        overflow: visible;
+    }
+
+    .nav-list-left {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+    .nav-list-left p {
+        white-space: nowrap;
+        font-size: 1.15rem;
+        margin: 5px 15px;
+    }
+
+    nav ul {
+        flex: 1 1 auto;
+        min-width: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 10px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: none;
+        padding: 4px 2px;
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav li {
+        flex: 0 0 auto;
+        margin: 0;
+        list-style: none;
+        white-space: nowrap;
+    }
+
+    .nav-list {
+        flex: 0 0 auto;
+        width: 90px;
+        min-width: 90px;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+}
+
+
+/* Smaller phones */
+@media (max-width: 480px) {
+
+    nav {
+        margin: 0 7px;
+        gap: 10px;
+    }
+
+    .nav-list-left p {
+        font-size: 1rem;
+        margin: 5px 10px;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .nav-list {
+        width: 82px;
+        min-width: 82px;
+    }
+}
+
+
+/* Very small phones */
+@media (max-width: 360px) {
+
+    nav {
+        margin: 0 5px;
+        gap: 7px;
+    }
+
+    .nav-list-left p {
+        font-size: 0.9rem;
+        margin: 5px 8px;
+    }
+
+    nav ul {
+        gap: 7px;
+    }
+
+    .nav-list {
+        width: 78px;
+        min-width: 78px;
+    }
+}
+
+/* =========================================================
+   MOBILE TOUCH / HOVER FIX
+   Keep hover animations on mouse devices.
+   Prevent sticky hover + blue tap states on touch devices.
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    /* Remove the browser's tap/selection flash */
+    * {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+
+    a,
+    button,
+    .nav-list,
+    .btn,
+    .website-development,
+    .ui-design,
+    .bug-fixing,
+    .website-optimization,
+    .e-library,
+    .portfolio,
+    .visitwebsite,
+    .visitwebsitehash,
+    .social-links a {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Never allow hover to remain visually stuck after tapping */
+    .nav-list:hover,
+    .website-development:hover,
+    .ui-design:hover,
+    .bug-fixing:hover,
+    .website-optimization:hover,
+    .e-library:hover,
+    .portfolio:hover,
+    .social-links a:hover {
+        transform: none !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18) !important;
+        cursor: default;
+    }
+
+    .nav-list:hover {
+        background-color: #C7B7A3 !important;
+    }
+
+    .btn:hover {
+        background-color: #C7B7A3 !important;
+    }
+
+    /* Stop links from becoming browser-blue while tapping */
+    a,
+    a:visited,
+    a:hover,
+    a:active {
+        color: inherit;
+        -webkit-text-fill-color: currentColor;
+    }
+
+    /* Keep the project's intended link colors */
+    .project a,
+    .project a:visited,
+    .project a:hover,
+    .project a:active {
+        color: white;
+    }
+
+    .left-foot a,
+    .left-foot a:visited,
+    .left-foot a:hover,
+    .left-foot a:active {
+        color: white;
+    }
+
+    /* Your yellow hover color is desktop/mouse-only */
+    .project a:hover,
+    .gmail h3:hover,
+    .mobile h3:hover,
+    .location h3:hover {
+        color: inherit !important;
+    }
+
+    /* Prevent the button's active/tap state from moving it */
+    .resume:active,
+    .get-in-touch:active {
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+
+/* Hover effects are explicitly mouse-only */
+@media (hover: hover) and (pointer: fine) {
+
+    .website-development:hover,
+    .ui-design:hover,
+    .bug-fixing:hover,
+    .website-optimization:hover,
+    .e-library:hover,
+    .portfolio:hover {
+        cursor: pointer;
+    }
+}
+
+/* =========================================================
+   FINAL MOBILE LAYOUT
+   Navbar: brand on top, menu underneath.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        width: 100%;
+    }
+
+    nav {
+        height: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 12px 12px 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+        box-sizing: border-box;
+    }
+
+    /* Piyush Dubey */
+    .nav-list-left {
+        width: fit-content;
+        flex: none;
+        white-space: nowrap;
+    }
+
+    .nav-list-left p {
+        font-size: 1.2rem;
+        margin: 5px 18px;
+        white-space: nowrap;
+    }
+
+    /* Home / About / Services / Projects */
+    nav ul {
+        width: 100%;
+        flex: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 10px;
+        overflow: visible;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        flex: none;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .nav-list {
+        width: 90px;
+        min-width: 90px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Keep the hero below the taller mobile navbar */
+    .firstSection {
+        padding-top: 145px;
+    }
+
+    /* Give the character breathing room before the divider */
+    .chr {
+        margin-bottom: 45px;
+    }
+
+    .mh {
+        margin-top: 0;
+    }
+
+    /* Get In Touch must remain dark text on its beige button */
+    .get-in-touch,
+    .get-in-touch:visited,
+    .get-in-touch:hover,
+    .get-in-touch:active,
+    .btn.get-in-touch {
+        color: black !important;
+        -webkit-text-fill-color: black !important;
+    }
+
+    .resume,
+    .resume:visited,
+    .resume:hover,
+    .resume:active,
+    .btn.resume {
+        color: black !important;
+        -webkit-text-fill-color: black !important;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    nav {
+        padding: 10px 8px 12px;
+        gap: 10px;
+    }
+
+    .nav-list-left p {
+        font-size: 1.05rem;
+        margin: 5px 14px;
+    }
+
+    nav ul {
+        gap: 7px;
+    }
+
+    .nav-list {
+        width: 76px;
+        min-width: 76px;
+    }
+
+    .firstSection {
+        padding-top: 135px;
+    }
+
+    .chr {
+        margin-bottom: 40px;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    nav {
+        padding-left: 5px;
+        padding-right: 5px;
+        gap: 8px;
+    }
+
+    .nav-list-left p {
+        font-size: 0.95rem;
+        margin: 5px 10px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    .nav-list {
+        width: 68px;
+        min-width: 68px;
+        border-radius: 12px;
+    }
+
+    .firstSection {
+        padding-top: 125px;
+    }
+
+    .chr {
+        margin-bottom: 35px;
+    }
+}
+
+/* =========================================================
+   LATEST MOBILE ALIGNMENT
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Piyush Dubey box: wide, but always fits the screen */
+    .nav-list-left {
+        width: calc(100vw - 30px);
+        max-width: 700px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-list-left p {
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* Navigation buttons spread evenly across the row */
+    nav ul {
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    /* Services: same centered card treatment as the project cards */
+    .service-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 25px;
+        overflow: visible;
+        padding: 10px 0 20px;
+    }
+
+    .website-development,
+    .ui-design,
+    .bug-fixing,
+    .website-optimization {
+        flex: 0 0 auto;
+        width: 250px;
+        height: 320px;
+        box-sizing: content-box;
+    }
+
+    /* Keep service numbers exactly where they were */
+    .number {
+        left: 211px;
+        top: -82px;
+    }
+
+    .number1 {
+        left: 227px;
+        top: -82px;
+    }
+
+    /*
+       Character should meet the horizontal divider.
+       Remove the extra mobile gap that was added before.
+    */
+    .chr {
+        margin-bottom: 0;
+    }
+
+    .mh {
+        margin-top: 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    /* Full-width brand box with safe side margins */
+    .nav-list-left {
+        width: calc(100vw - 20px);
+    }
+
+    /* Equal visual spacing between every nav button */
+    nav ul {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    /* Same centered single-card layout as projects */
+    .service-box {
+        align-items: center;
+        gap: 20px;
+    }
+
+    .website-development,
+    .ui-design,
+    .bug-fixing,
+    .website-optimization {
+        width: 250px;
+        height: 320px;
+    }
+
+    /* Let the character sit directly against the divider */
+    .chr {
+        margin-bottom: 0;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    .nav-list-left {
+        width: calc(100vw - 12px);
+    }
+
+    nav ul {
+        justify-content: space-around;
+    }
+
+    .nav-list {
+        width: 68px;
+        min-width: 68px;
+    }
+
+    .service-box {
+        gap: 20px;
+    }
+}
+
+/* =========================================================
+   FINAL SMALL MOBILE CORRECTION
+   Keep the user's original spacing/appearance.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* Give every navbar button equal space on ALL sides */
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        gap: 0;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-list {
+        width: 90px;
+        min-width: 90px;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Remove the responsive section padding that was creating
+       the unwanted gap below the character. */
+    .firstSection {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .chr {
+        margin: 0;
+        padding: 0;
+        height: auto;
+        line-height: 0;
+        align-items: flex-end;
+    }
+
+    .chr_img {
+        display: block;
+        margin: 0;
+    }
+
+    .mh {
+        margin-top: 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    /* Equal left/right/top/bottom breathing room around buttons */
+    nav ul {
+        justify-content: space-around;
+    }
+
+    .nav-list {
+        width: 76px;
+        min-width: 76px;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Character directly meets the divider */
+    .firstSection {
+        padding-bottom: 0;
+    }
+
+    .chr {
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+    }
+
+    .chr_img {
+        margin: 0;
+    }
+
+    .mh {
+        margin-top: 0;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    nav ul {
+        justify-content: space-around;
+    }
+
+    .nav-list {
+        width: 68px;
+        min-width: 68px;
+    }
+
+    .firstSection {
+        padding-bottom: 0;
+    }
+
+    .chr {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* Center Piyush Dubey perfectly inside its mobile box */
+@media (max-width: 768px) {
+    .nav-list-left {
+        width: calc(100vw - 30px);
+        margin-left: auto;
+        margin-right: auto;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-list-left p {
+        width: 100%;
+        margin: 5px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-list-left {
+        width: calc(100vw - 20px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .nav-list-left p {
+        text-align: center;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 360px) {
+    .nav-list-left {
+        width: calc(100vw - 12px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* =========================================================
+   NAVBAR BUTTON SPACING — MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    nav ul {
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        padding: 0 5px;
+        margin: 0;
+    }
+
+    nav li {
+        flex: 0 1 auto;
+        margin: 0;
+    }
+
+    .nav-list {
+        width: auto;
+        min-width: 70px;
+        padding: 0 8px;
+        box-sizing: border-box;
+        margin: 0;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    nav {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    nav ul {
+        gap: 8px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .nav-list {
+        min-width: 65px;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+}
+
+
+@media (max-width: 360px) {
+
+    nav {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav ul {
+        gap: 6px;
+        padding-left: 3px;
+        padding-right: 3px;
+    }
+
+    .nav-list {
+        min-width: 58px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+/* =========================================================
+   MOBILE: Disable Visit Website hover animation
+   The border/button must stay in its normal state after tap.
+   ========================================================= */
+
+@media (hover: none) and (pointer: coarse) {
+
+    .visitwebsite:hover,
+    .visitwebsitehash:hover {
+        color: white !important;
+        border: 1px solid white !important;
+        border-radius: 20px !important;
+        width: fit-content;
+        padding: 5px 10px;
+        transform: none !important;
+        box-shadow: none !important;
+        transition: none !important;
+    }
+
+    .visitwebsite:active,
+    .visitwebsitehash:active,
+    .visitwebsite:focus,
+    .visitwebsitehash:focus {
+        color: white !important;
+        border: 1px solid white !important;
+        transform: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+}
+
+/* =========================================================
+   MOBILE: Reduce the gap between header and first section
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* The navbar is taller on mobile, so reduce the hero's
+       extra top offset while keeping a small breathing space. */
+    .firstSection {
+        padding-top: 105px;
+    }
+}
+
+@media (max-width: 480px) {
+    .firstSection {
+        padding-top: 95px;
+    }
+}
+
+@media (max-width: 360px) {
+    .firstSection {
+        padding-top: 90px;
+    }
+}
