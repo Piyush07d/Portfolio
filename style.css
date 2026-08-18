@@ -669,11 +669,8 @@ footer {
 }
 
 
-/* =========================================================
-   RESPONSIVE DESIGN
-   Desktop styles above remain unchanged.
-   These rules only apply to smaller screens.
-   ========================================================= */
+
+   /* RESPONSIVE DESIGN */
 
 /* Tablets, iPads and smaller laptops */
 @media (max-width: 1200px) {
