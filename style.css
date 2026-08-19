@@ -54,7 +54,7 @@ nav {
 .nav-list-left {
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
-    border: 1px solid white;
+    border: 0.5px solid rgba(199, 183, 163, 0.65);
     border-radius: 25px;
 }
 
@@ -110,11 +110,6 @@ section {
 .web-dev {
     font-size: 1.723rem;
 }
-
-/* .des {
-    font-size: 1.5rem;
-    color: #FFD166;
-} */
 
 .introdiv {
     display: flex;
@@ -209,19 +204,42 @@ section {
 }
 
 
-/* Second Section */
+/* HR TAGS */
 
 .mh {
     border: 0;
-    background-color: white;
-    height: 1.2px;
+    background-color: rgba(199, 183, 163, 0.65);
+    height: 0.5px;
     margin: 0 70px 20px;
 }
+
+.eh{
+    border: 0;
+    background-color: white;
+    height: 0.5px;
+    margin: 0;
+}
+
+.sh{
+    border: 0;
+    background-color: white;
+    height: 0.5px;
+    margin-top: 10px;
+}
+
+.serh{
+    border: 0;
+    background-color: white;
+    height: 0.5px;
+}
+
+
+/* Second Section */
 
 
 .secondSection {
     max-width: 90vw;
-    height: 740px;
+    height: 765px;
     margin: auto;
 }
 
@@ -662,7 +680,7 @@ footer {
 }
 
 .footer-h {
-    height: 1px;
+    height: 0.1px;
     margin: 0 30px;
     background-color: white;
     border: 0;
