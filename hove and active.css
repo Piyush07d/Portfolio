@@ -1,8 +1,4 @@
 * {
-    -webkit-tap-highlight-color: transparent;
-}
-
-* {
     margin: 0%;
     padding: 0;
 }
@@ -46,8 +42,12 @@ nav {
     border-radius: 8px;
     width: 90px;
     margin: 0 5px;
+    transition: all 0.3s ease-in-out;
 }
 
+.nav-list:hover {
+    background-color: #a49685;
+}
 
 
 .nav-list li {
@@ -152,15 +152,27 @@ section {
     color: black;
     height: 3.5vh;
     font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn img {
     height: 20px;
 }
 
+.btn:hover {
+    background-color: #a49685;
+}
+
+.resume:active {
+    transition: all 0.15s ease;
+    transform: scale(0.97);
+}
 
 
-
+.get-in-touch:active {
+    transition: all 0.15s ease;
+    transform: scale(0.97);
+}
 
 .svgs {
     height: 10px;
@@ -364,8 +376,17 @@ section {
     padding: 15px 20px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    transition: all 0.2s ease-in-out;
 }
 
+.website-development:hover,
+.ui-design:hover,
+.bug-fixing:hover,
+.website-optimization:hover {
+    transform: scale(1.07);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
 
 .points {
     margin-top: 20px;
@@ -499,8 +520,14 @@ section {
     align-items: center;
     height: 5vh;
     width: 6vw;
+    transition: all ease-in-out 0.2s;
 }
 
+.view-link:hover {
+    outline-color: #863540;
+    background-color: #65232c;
+    cursor: pointer;
+}
 
 /* Footer */
 
@@ -563,8 +590,23 @@ footer {
     align-items: center;
 }
 
+.gmail h3:hover {
+    transition: all 0.5s ease;
+    color: #FFD166;
 
+}
 
+.mobile h3:hover {
+    transition: all 0.5s ease;
+    color: #FFD166;
+
+}
+
+.location h3:hover {
+    transition: all 0.5s ease;
+    color: #FFD166;
+    cursor: pointer;
+}
 
 .freelance {
     display: flex;
@@ -578,6 +620,10 @@ footer {
     gap: 20px;
 }
 
+.social-links a:hover {
+    transition: all 0.3s ease;
+    transform: scale(1.1);
+}
 
 .social-links img {
     height: 40px;
