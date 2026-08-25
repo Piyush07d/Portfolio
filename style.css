@@ -802,7 +802,7 @@ footer {
     }
 
     .nav-list-left {
-        padding: 0 38vw;
+        padding: 0 37vw;
     }
 
     .nav-list-left p {
@@ -1227,7 +1227,7 @@ footer {
     }
 
     .nav-list-left {
-        padding: 0 28.4vw;
+        padding: 0 24vw;
     }
 
     .introdiv {
@@ -1413,7 +1413,7 @@ footer {
 
     /* Prevent navbar from becoming too wide */
     .nav-list-left {
-        padding: 0 24vw;
+        padding: 0 20vw;
     }
 
     .nav-list-left p {
@@ -1472,7 +1472,7 @@ footer {
 @media (max-width: 340px) {
 
     .nav-list-left {
-        padding: 0 20vw;
+        padding: 0 18vw;
     }
 
     .nav-list-left p {
