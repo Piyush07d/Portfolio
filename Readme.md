@@ -53,17 +53,12 @@ The design focuses on a clean, minimal interface with responsive layouts that wo
 ```text
 Portfolio/
 │
-├── index.html
-├── public/
-│   ├── css/
-│   │   └── style.css
-│   │
-│   ├── js/
-│   │   └── script.js
-│   │
-│   └── images/
+├── files/
+│   └── Resume.pdf
 │
-├── server.js
-├── package.json
-├── .gitignore
-└── README.md
+├── img/
+│   └── *images
+│ 
+├── index.html
+├── README.md
+└── style.css
