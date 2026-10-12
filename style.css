@@ -308,6 +308,7 @@ section {
 .Html,
 .CSS,
 .vs-code,
+.git,
 .github,
 .javascript,
 .sql,
@@ -321,8 +322,8 @@ section {
 .lan-div,
 .tool-div,
 .current-div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    gap: 40px;
     margin: 15px 0;
 }
 
