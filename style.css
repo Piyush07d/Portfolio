@@ -1,11 +1,11 @@
 :root {
     --bg: #ebe1ce;
-    --card: #e9debc;
+    --card: #e6cdb5;
     --font-color: #152238;
 
     --muted: #152238ce;
 
-    --radius-1: 10px;
+    --radius-1: 20px;
 }
 
 * {
@@ -196,7 +196,7 @@ header {
     height: 60vh;
 }
 
-.about-me{
+.about-me {
     width: 90vh;
 }
 
@@ -213,50 +213,50 @@ header {
     transform: rotate(1deg);
 }
 
-.about-bottom-sec{
+.about-bottom-sec {
     display: flex;
     justify-content: center;
     gap: 3rem;
 }
 
-.education{
+.education {
     width: 50%;
 }
 
-.skills{
+.skills {
     width: 35%;
 }
 
 .education,
-.skills{
+.skills {
     height: 40vh;
     background-color: var(--card);
     border-radius: var(--radius-1);
     padding: 15px 20px;
 
-    box-shadow: 3px 4px 8px rgba(98, 94, 94, 0.526);
+    box-shadow: 1px 1px 8px #bba48ebd;
 }
 
 .education h1,
-.skills h1{
+.skills h1 {
     margin-bottom: 10px;
     font-size: 2.5rem;
     font-weight: 750;
 }
 
-.education-card-row{
+.education-card-row {
     display: flex;
     justify-content: space-between;
     gap: 4rem;
     margin-bottom: 15px;
 }
 
-.qualification{
+.qualification {
     color: var(--muted);
 }
 
 .langs-langs-tools,
-.langs-tools{
+.langs-tools {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -264,7 +264,7 @@ header {
 }
 
 .langs-langs-tools span,
-.langs-tools span{
+.langs-tools span {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -274,9 +274,30 @@ header {
 }
 
 .langs-langs-tools img,
-.langs-tools img{
+.langs-tools img {
     height: 7vh;
 }
+
+
+/* =======================================================================================================================================================================================
+                                                                            PROJECTS
+========================================================================================================================================================================================== */
+
+#projects {
+    padding: 20px 80px;
+}
+
+.projects-top-sec{
+    width: 100%;
+}
+
+.projects-top-sec h1 {
+    font-family: "Homemade Apple", cursive;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
 
 /* =======================================================================================================================================================================================
                                                                             MOBILE VIEW
