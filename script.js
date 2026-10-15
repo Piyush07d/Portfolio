@@ -64,3 +64,5 @@ function setupMarquees() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(setupMarquees, 150);
     });
+
+    

@@ -1,11 +1,11 @@
 :root {
     --bg: #ebe1ce;
-    --card: #D8C99B;
-    --surface: #deccb1;
-    --surface-2: #ed3c1f;
-    --font-color: #292620;
+    --card: #e9debc;
+    --font-color: #152238;
 
-    --radius-1: 15px;
+    --muted: #152238ce;
+
+    --radius-1: 10px;
 }
 
 * {
@@ -16,7 +16,7 @@
 
 body {
     background-color: var(--bg);
-     font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
     letter-spacing: 0%;
     word-spacing: 0%;
     color: var(--font-color);
@@ -26,26 +26,23 @@ body {
 button {
     -webkit-tap-highlight-color: transparent;
     cursor: pointer;
-     font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif;
 }
 
-p{
+p {
     font-size: 1.2rem;
     font-weight: 650;
 }
 
-hr {
-    width: 100%;
-    border-radius: 50%;
-    margin: 0 auto;
-    height: 0.1px;
-    background-color: var(--font-color);
+.section-line {
+    height: 1px;
+    width: 99%;
     border: none;
+    border-radius: 50%;
+    background-color: #15223842;
+    margin: 10px auto;
 }
 
-#about{
-    padding: 30px 30px;
-}
 
 /* =======================================================================================================================================================================================
                                                                             HEADER
@@ -61,15 +58,17 @@ header {
     display: flex;
     justify-content: space-between;
 
-    padding: 10px 50px;
+    padding: 5px 50px;
     color: var(--font-color);
 
-    background-color: var(--bg);
+    background-color: #ebe1cee2;
+    backdrop-filter: blur(5px);
 }
 
 .header-left-section {
     font-size: 2rem;
     font-weight: 750;
+    font-family: "Homemade Apple", cursive;
 }
 
 .header-right-section {
@@ -103,7 +102,7 @@ header {
     align-items: center;
     text-align: center;
     padding-top: 50px;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 
 .title {
@@ -127,7 +126,7 @@ header {
     }
 }
 
-.home-img{
+.home-img {
     display: flex;
     justify-content: center;
 }
@@ -153,7 +152,7 @@ header {
     font-size: 1.3rem;
 }
 
-.carousel-track.left {
+.carousel-track {
     animation: scroll-left 15s linear infinite;
 }
 
@@ -171,29 +170,113 @@ header {
                                                                             ABOUT SECTION
 ========================================================================================================================================================================================== */
 
-#about > div{
+#about {
+    padding: 50px 80px;
+    gap: 10vh;
     display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+    flex-direction: column;
 }
 
-.about-me,
+.about-top-sec {
+    display: flex;
+    justify-content: space-around;
+}
+
+.my-img {
+    background-color: #ffffff;
+    height: fit-content;
+    width: fit-content;
+
+    margin-top: 85px;
+    padding: 5px 5px 30px 5px;
+    transform: rotate(-5deg);
+}
+
+.my-img img {
+    height: 60vh;
+}
+
+.about-me{
+    width: 90vh;
+}
+
+.about-me p {
+    margin: 10px 0;
+}
+
+.about-me h1 {
+    font-family: "Homemade Apple", cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: end;
+    transform: rotate(1deg);
+}
+
+.about-bottom-sec{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
 .education{
-    background-color: var(--surface);
-    border-radius: var(--radius-1);
-    padding: 20px 20px;
     width: 50%;
 }
 
-.languages{
-    margin-top: 1rem;
-    background-color: var(--surface);
-    border-radius: var(--radius-1);
-    padding: 20px 20px;
-    width: 100%;
+.skills{
+    width: 35%;
 }
 
+.education,
+.skills{
+    height: 40vh;
+    background-color: var(--card);
+    border-radius: var(--radius-1);
+    padding: 15px 20px;
 
+    box-shadow: 3px 4px 8px rgba(98, 94, 94, 0.526);
+}
+
+.education h1,
+.skills h1{
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    font-weight: 750;
+}
+
+.education-card-row{
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 15px;
+}
+
+.qualification{
+    color: var(--muted);
+}
+
+.langs-langs-tools,
+.langs-tools{
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
+}
+
+.langs-langs-tools span,
+.langs-tools span{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    gap: 3px;
+    text-align: center;
+}
+
+.langs-langs-tools img,
+.langs-tools img{
+    height: 7vh;
+}
 
 /* =======================================================================================================================================================================================
                                                                             MOBILE VIEW
