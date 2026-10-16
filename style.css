@@ -2,16 +2,16 @@
     --bg: #f1e0c0;
     --card: #ffffff;
     --font-color: #152238;
-    --file: rgb(255, 203, 113);
+    --file: rgb(249, 194, 99);
 
     --muted: #152238ce;
 
     --radius-1: 20px;
-    --radius-2: 15px;
+    --radius-2: 10px;
 }
 
 /* =======================================================================================================================================================================================
-                                                                            GLOBAL
+                                                                            GLOBAL CONFIGS
 ========================================================================================================================================================================================== */
 
 * {
@@ -27,6 +27,7 @@ body {
     word-spacing: 0%;
     color: var(--font-color);
 }
+
 
 
 button {
@@ -51,6 +52,23 @@ p {
 
 
 /* Animaiton on scroll */
+
+.scalegrow {
+    animation: grow linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+@keyframes grow {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
 
 .upview {
     animation: upview linear;
@@ -78,7 +96,7 @@ p {
     animation-range: entry 0% cover 30%;
 }
 
-@keyframes leftview{
+@keyframes leftview {
     from {
         opacity: 0.8;
         transform: translateX(-100px);
@@ -96,7 +114,7 @@ p {
     animation-range: entry 0% cover 20%;
 }
 
-@keyframes rightview{
+@keyframes rightview {
     from {
         opacity: 0.8;
         transform: translateX(200px);
@@ -363,49 +381,79 @@ header {
 }
 
 .project-container {
-    margin: 30px auto;
-    border-block: 1px solid var(--font-color);
-    padding-block: 10px;
+    margin: 10px auto;
+    padding-block: 80px;
+
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
 }
 
 .project-file {
-    display: flex;
-    flex-direction: column;
-    gap: 0rem;
-    padding: 10px 8px 0 8px;
-
     background-color: var(--file);
-    width: fit-content;
     height: 35vh;
-    border-radius: var(--radius-2);
-}
-
-.project-file img {
-    height: 20vh;
-    border-radius: 8px 8px 0 0;
+    width: 20vw;
+    border-radius: var(--radius-1);
+    padding-top: 10px;
 }
 
 .project-card {
-    background-color: var(--card);
-    transition: all 0.3s ease-in-out;
-    border-radius: 8px 8px 0 0;
-    width: fit-content;
-    padding: 10px;
-}
-
-.cover {
     height: 100%;
-    margin: -140px 0.1px 0 0.1px;
-    background-color: var(--file);
-    border-radius: 10px 10px 0 0;
-    z-index: 1000;
+    width: 95%;
+    margin: 0 auto;
+    background-color: var(--card);
+    border-radius: var(--radius-2);
+
+    padding: 9px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 0.3s ease-in-out;
 }
 
 .project-card:hover {
-    transform: translateY(-130px);
+    transform: translateY(-180px);
 }
 
 
+.view {
+    background-color: var(--card);
+    color: var(--font-color);
+    text-align: center;
+
+    padding: 5px;
+    border: 0.5px solid #15223874;
+    border-radius: 30px;
+    cursor: pointer;
+
+    transition: all 0.2s ease-in-out;
+}
+
+.view:active {
+    transform: scale(0.98);
+}
+
+.project-cover {
+    height: 26vh;
+    width: 20vw;
+    position: relative;
+    background: linear-gradient(180deg,
+            rgb(248, 210, 154) 0%,
+            rgb(250, 194, 99) 80%);
+    top: -181px;
+    border-radius: 0 20px 20px 20px;
+}
+
+.project-cover::after {
+    content: "";
+    height: 3.5vh;
+    width: 10vw;
+    position: absolute;
+    top: -21px;
+    border-radius: 20px 50px 0 0;
+    clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
+    background-color: rgb(248, 210, 144);
+}
 
 /* =======================================================================================================================================================================================
                                                                             MOBILE VIEW
