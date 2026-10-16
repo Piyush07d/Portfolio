@@ -1,12 +1,18 @@
 :root {
-    --bg: #ebe1ce;
-    --card: #e6cdb5;
+    --bg: #f1e0c0;
+    --card: #ffffff;
     --font-color: #152238;
+    --file: rgb(255, 203, 113);
 
     --muted: #152238ce;
 
     --radius-1: 20px;
+    --radius-2: 15px;
 }
+
+/* =======================================================================================================================================================================================
+                                                                            GLOBAL
+========================================================================================================================================================================================== */
 
 * {
     margin: 0;
@@ -44,6 +50,64 @@ p {
 }
 
 
+/* Animaiton on scroll */
+
+.upview {
+    animation: upview linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+@keyframes upview {
+    from {
+        opacity: 0.8;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+
+
+.leftview {
+    animation: leftview linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+}
+
+@keyframes leftview{
+    from {
+        opacity: 0.8;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.rightview {
+    animation: rightview linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+@keyframes rightview{
+    from {
+        opacity: 0.8;
+        transform: translateX(200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
 /* =======================================================================================================================================================================================
                                                                             HEADER
 ========================================================================================================================================================================================== */
@@ -61,7 +125,7 @@ header {
     padding: 5px 50px;
     color: var(--font-color);
 
-    background-color: #ebe1cee2;
+    background-color: #f1e0c079;
     backdrop-filter: blur(5px);
 }
 
@@ -183,13 +247,13 @@ header {
 }
 
 .my-img {
-    background-color: #ffffff;
+    background-color: var(--card);
     height: fit-content;
     width: fit-content;
 
     margin-top: 85px;
     padding: 5px 5px 30px 5px;
-    transform: rotate(-5deg);
+    /* transform: rotate(-5deg); */
 }
 
 .my-img img {
@@ -234,7 +298,7 @@ header {
     border-radius: var(--radius-1);
     padding: 15px 20px;
 
-    box-shadow: 1px 1px 8px #bba48ebd;
+    box-shadow: 2px 3px 4px #bba48e99;
 }
 
 .education h1,
@@ -287,16 +351,60 @@ header {
     padding: 20px 80px;
 }
 
-.projects-top-sec{
+.projects-top-sec {
     width: 100%;
 }
 
-.projects-top-sec h1 {
+.projects-title h1 {
     font-family: "Homemade Apple", cursive;
     font-size: 3rem;
     font-weight: 700;
     text-align: center;
 }
+
+.project-container {
+    margin: 30px auto;
+    border-block: 1px solid var(--font-color);
+    padding-block: 10px;
+}
+
+.project-file {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    padding: 10px 8px 0 8px;
+
+    background-color: var(--file);
+    width: fit-content;
+    height: 35vh;
+    border-radius: var(--radius-2);
+}
+
+.project-file img {
+    height: 20vh;
+    border-radius: 8px 8px 0 0;
+}
+
+.project-card {
+    background-color: var(--card);
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px 8px 0 0;
+    width: fit-content;
+    padding: 10px;
+}
+
+.cover {
+    height: 100%;
+    margin: -140px 0.1px 0 0.1px;
+    background-color: var(--file);
+    border-radius: 10px 10px 0 0;
+    z-index: 1000;
+}
+
+.project-card:hover {
+    transform: translateY(-130px);
+}
+
 
 
 /* =======================================================================================================================================================================================
