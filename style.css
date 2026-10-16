@@ -4,7 +4,7 @@
     --font-color: #152238;
     --file: rgb(249, 194, 99);
 
-    --muted: #152238ce;
+    --muted: #343c4ac5;
 
     --radius-1: 20px;
     --radius-2: 10px;
@@ -264,6 +264,10 @@ header {
     justify-content: space-around;
 }
 
+.about-top-sec>h1 {
+    display: none;
+}
+
 .my-img {
     background-color: var(--card);
     height: fit-content;
@@ -298,20 +302,20 @@ header {
 .about-bottom-sec {
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    gap: 12.5rem;
 }
 
 .education {
-    width: 50%;
+    width: fit-content;
 }
 
 .skills {
-    width: 35%;
+    width: fit-content;
 }
 
 .education,
 .skills {
-    height: 40vh;
+    height: 48vh;
     background-color: var(--card);
     border-radius: var(--radius-1);
     padding: 15px 20px;
@@ -329,12 +333,17 @@ header {
 .education-card-row {
     display: flex;
     justify-content: space-between;
-    gap: 4rem;
+    flex-direction: column;
     margin-bottom: 15px;
 }
 
-.qualification {
+.education-card-row span h3 {
     color: var(--muted);
+    white-space: nowrap;
+}
+
+.card-line{
+    margin-bottom: 10px;
 }
 
 .langs-langs-tools,
@@ -440,7 +449,7 @@ header {
     background: linear-gradient(180deg,
             rgb(248, 210, 154) 0%,
             rgb(250, 194, 99) 80%);
-    top: -181px;
+    top: -179px;
     border-radius: 0 20px 20px 20px;
 }
 
@@ -459,8 +468,117 @@ header {
                                                                             MOBILE VIEW
 ========================================================================================================================================================================================== */
 
-/* @media (max-width: 600px) {
-    header{
+@media (max-width: 600px) {
 
+    /* GLOBAL CONFIGS */
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
-} */
+
+    body {
+        font-size: 1rem;
+    }
+
+    /* HEADER */
+
+    header {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .header-left-section {
+        font-size: 1.8rem;
+    }
+
+    .header-right-section {
+        display: none;
+    }
+
+
+    /* HOME */
+
+    .top-home {
+        margin-top: 5vh;
+    }
+
+    .bottom-home {
+        margin-top: 14vh;
+    }
+
+    #typing-text,
+    .cursor {
+        font-size: 8vw;
+    }
+
+    .home-img img {
+        height: 43vh;
+    }
+
+    /* ABOUT */
+
+    #about {
+        padding: 20px 10px;
+        width: 100vw;
+        gap: 0rem;
+    }
+
+    .about-top-sec h1 {
+        display: block;        
+        font-family: "Homemade Apple", cursive;
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: right;
+        transform: rotate(6deg);
+    }
+
+    .my-img {
+        margin-top: 30px;
+        margin-left: 20px;
+        transform: rotate(-5deg);
+    }
+
+    .my-img img {
+        height: 30vh;
+    }
+
+    .about-top-sec {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-me {
+        width: 100vw;
+        margin: 50px auto;
+    }
+
+    .about-me h1 {
+        display: none;
+    }
+
+    .about-me h2 {
+        font-size: 1.8rem;
+    }
+
+    .about-me p {
+        font-size: 15px;
+    }
+
+    .about-bottom-sec{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .education,
+    .skills{
+        width: 100%;
+        height: fit-content;
+        padding: 15px 14px;
+    }
+}
