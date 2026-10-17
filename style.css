@@ -8,6 +8,10 @@
 
     --radius-1: 20px;
     --radius-2: 10px;
+    --radius-3: 6px;
+
+    --shadow: 2px 3px 4px #bba48e99;
+    --shadow-s: 4px 2px 8px #b8a075cf;
 }
 
 /* =======================================================================================================================================================================================
@@ -28,7 +32,10 @@ body {
     color: var(--font-color);
 }
 
-
+a{
+    text-decoration: none;
+    color: var(--font-color);
+}
 
 button {
     -webkit-tap-highlight-color: transparent;
@@ -160,7 +167,7 @@ header {
     align-items: center;
 }
 
-.nav-buttons {
+.header-right-section a {
     background-color: transparent;
     border: none;
     font-size: 1.1rem;
@@ -169,7 +176,7 @@ header {
     transition: all 0.2s ease-in-out;
 }
 
-.nav-buttons:hover {
+.header-right-section a:hover {
     /* text-decoration: underline; */
     transform: translateY(-1px);
     font-size: 1.3rem;
@@ -179,42 +186,53 @@ header {
                                                                             HOME SECTION
 ========================================================================================================================================================================================== */
 
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 85px 30px 0 30px;
+}
 
-.top-home {
-    align-items: center;
-    text-align: center;
-    padding-top: 50px;
-    margin: 0 auto;
+.hero-left-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-left-section {
+    margin: 0;
+    padding: 0;
 }
 
 .title {
-    font-size: 4.5rem;
-    font-weight: 700;
+    font-size: 5.5rem;
+    font-weight: 800;
 }
 
-#typing-text {
-    white-space: pre;
-}
-
-.cursor {
-    display: inline-block;
-    margin-left: 3px;
-    animation: blink 0.8s step-end infinite;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
-.home-img {
+.cv-contact-btn-container{
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: fit-content;
+    padding: 20px 7px;
 }
 
-.home-img img {
-    height: 65vh;
+.cv-contact{
+    background-color: var(--card);
+    border-radius: var(--radius-3);
+    padding: 5px 8px;
+    box-shadow: var(--shadow-s);
+    color: var(--font-color);
+    font-weight: 650;
+}
+
+.cv-contact:active{
+    transform: translateY(1px);
+    box-shadow: inset 6px 5px 8px 1px rgba(97, 89, 89, 0.263);
+}
+
+.hero-right-section img {
+    height: 75vh;
+    margin-bottom: -6px;
 }
 
 /* CAROUSEL */
@@ -301,49 +319,54 @@ header {
 
 .about-bottom-sec {
     display: flex;
-    justify-content: center;
-    gap: 12.5rem;
+    justify-content: space-evenly;
 }
 
 .education {
-    width: fit-content;
+    width: 35%;
 }
 
 .skills {
     width: fit-content;
+}
+
+.interests {
+    width: 25%;
 }
 
 .education,
-.skills {
-    height: 48vh;
+.skills,
+.interests {
+    height: 42vh;
     background-color: var(--card);
     border-radius: var(--radius-1);
     padding: 15px 20px;
 
-    box-shadow: 2px 3px 4px #bba48e99;
+    box-shadow: var(--shadow);
 }
 
 .education h1,
-.skills h1 {
+.skills h1,
+.interests h1 {
     margin-bottom: 10px;
     font-size: 2.5rem;
     font-weight: 750;
 }
 
-.education-card-row {
+.education-card-row,
+.beyond span {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin-bottom: 15px;
 }
 
-.education-card-row span h3 {
+.education-card-row span h4 {
     color: var(--muted);
     white-space: nowrap;
 }
 
-.card-line{
-    margin-bottom: 10px;
+.card-line {
+    margin: 10px auto;
 }
 
 .langs-langs-tools,
@@ -351,7 +374,7 @@ header {
     align-items: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin-top: 20px;
+    margin: 10px 0;
 }
 
 .langs-langs-tools span,
@@ -529,7 +552,7 @@ header {
     }
 
     .about-top-sec h1 {
-        display: block;        
+        display: block;
         font-family: "Homemade Apple", cursive;
         font-size: 2rem;
         font-weight: 700;
@@ -569,14 +592,14 @@ header {
         font-size: 15px;
     }
 
-    .about-bottom-sec{
+    .about-bottom-sec {
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
 
     .education,
-    .skills{
+    .skills {
         width: 100%;
         height: fit-content;
         padding: 15px 14px;

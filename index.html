@@ -9,13 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=DynaPuff:wght@400..700&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oooh+Baby&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap"
-        rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=DynaPuff:wght@400..700&family=Homemade+Apple&family=Kristi&family=La+Belle+Aurore&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oooh+Baby&family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titan+One&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -26,13 +20,13 @@
 
     <header>
         <div class="header-left-section">
-            Portfolio
+            <a href="#home">Portfolio</a>
         </div>
         <div class="header-right-section">
-            <button class="nav-buttons">Home</button>
-            <button class="nav-buttons">About</button>
-            <button class="nav-buttons">Projects</button>
-            <button class="nav-buttons">Contact</button>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="">Contact</a>
         </div>
     </header>
 
@@ -40,25 +34,40 @@
     <main>
         <section id="home">
 
-            <div class="top-home">
-                <span class="title">
-                    <span id="typing-text"></span><span class="cursor">|</span>
-                </span>
-            </div>
-            <div class="bottom-home">
-                <div class="home-img">
+            <div class="hero-section">
+                <div class="hero-left-section">
+                    <span class="title">
+                        Hello !
+                        <br>
+                        I'm Piyush Dubey
+                    </span>
+                    <span class="cv-contact-btn-container">
+                        <a href="assets/Piyush-Dubey.pdf" target="_blank" rel="noopener noreferrer">
+                            <span class="cv-contact">
+                                Download CV
+                            </span>
+                        </a>
+
+                        <a href="#footer">
+                            <span class="cv-contact">
+                                Get In Touch
+                            </span>
+                        </a>
+                    </span>
+                </div>
+                <div class="hero-right-section">
                     <img src="assets/home-img.svg">
                 </div>
-                <div class="carousel">
-                    <div class="carousel-track">
-                        <div class="carousel-content">
-                            <span>Welcome to my portfolio</span>
-                            <span>✦</span>
-                            <span>Welcome to my portfolio</span>
-                            <span>✦</span>
-                            <span>Welcome to my portfolio</span>
-                            <span>✦</span>
-                        </div>
+            </div>
+            <div class="carousel">
+                <div class="carousel-track">
+                    <div class="carousel-content">
+                        <span>Welcome to my portfolio</span>
+                        <span>✦</span>
+                        <span>Welcome to my portfolio</span>
+                        <span>✦</span>
+                        <span>Welcome to my portfolio</span>
+                        <span>✦</span>
                     </div>
                 </div>
             </div>
@@ -94,21 +103,10 @@
                     <h1>Education</h1>
                     <span class="education-card-row">
                         <span>
-                            <h2>Government Engineering College, Palanpur</h2>
+                            <h3>Government Engineering College, Palanpur</h3>
                         </span>
                         <span>
-                            <h3>Bachelor of Engineering (CE) -  (2025 - 2029)</h3>
-                        </span>
-                    </span>
-
-                    <hr class="card-line">
-
-                    <span class="education-card-row">
-                        <span>
-                            <h2>C. I. Patel Eng. Med. High School, Kalol</h2>
-                        </span>
-                        <span>
-                            <h3>Higher Secondary Education - (2023 - 2025)</h3>
+                            <h4>Bachelor of Engineering (CE) - (2025 - 2029)</h4>
                         </span>
                     </span>
 
@@ -116,10 +114,21 @@
 
                     <span class="education-card-row">
                         <span>
-                            <h2>St. Anne's Eng. Med. School, Kalol</h2>
+                            <h3>C. I. Patel Eng. Med. High School, Kalol</h3>
                         </span>
                         <span>
-                            <h3>Pri. & Sec. Education - (2024 - 2023)</h3>
+                            <h4>Higher Secondary Education - (2023 - 2025)</h4>
+                        </span>
+                    </span>
+
+                    <hr class="card-line">
+
+                    <span class="education-card-row">
+                        <span>
+                            <h3>St. Anne's Eng. Med. School, Kalol</h3>
+                        </span>
+                        <span>
+                            <h4>Pri. & Sec. Education - (2024 - 2023)</h4>
                         </span>
                     </span>
 
@@ -156,6 +165,24 @@
                                 src="https://cdn.jsdelivr.net/gh/glincker/thesvg@main/public/icons/visual-studio-code/default.svg">
                             VS Code
                         </span>
+                    </span>
+                </span>
+                <span class="interests upview">
+                    <h1>My Interests</h1>
+                    <span>
+                        <h3>🤍 Minimalism Connoisseur</h3>
+                    </span>
+                    <hr class="card-line">
+                    <span>
+                        <h3>🍃 Solace in Nature</h3>
+                    </span>
+                    <hr class="card-line">
+                    <span>
+                        <h3>🪐 Curiosity Driven</h3>
+                    </span>
+                    <hr class="card-line">
+                    <span>
+                        <h3>🎧 Music Aficionado </h3>
                     </span>
                 </span>
             </div>
