@@ -7,21 +7,25 @@
     --muted: #343c4ac5;
 
     --radius-1: 20px;
-    --radius-2: 10px;
-    --radius-3: 6px;
+    --radius-2: 13px;
+    --radius-3: 8px;
 
     --shadow: 2px 3px 4px #bba48e99;
-    --shadow-s: 4px 2px 8px #b8a075cf;
+    --shadow-s: 4px 5px 4px #e3cda5cf;
 }
 
 /* =======================================================================================================================================================================================
-                                                                            GLOBAL CONFIGS
+                                    GLOBAL CONFIGS
 ========================================================================================================================================================================================== */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -32,9 +36,17 @@ body {
     color: var(--font-color);
 }
 
-a{
+::-webkit-scrollbar {
+    display: none;
+}
+
+a {
     text-decoration: none;
     color: var(--font-color);
+}
+
+section {
+    scroll-margin-top: 85px;
 }
 
 button {
@@ -80,7 +92,7 @@ p {
 .upview {
     animation: upview linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 40%;
+    animation-range: entry 0% cover 45%;
 }
 
 @keyframes upview {
@@ -100,7 +112,7 @@ p {
 .leftview {
     animation: leftview linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 30%;
+    animation-range: entry 0% cover 40%;
 }
 
 @keyframes leftview {
@@ -118,7 +130,7 @@ p {
 .rightview {
     animation: rightview linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 20%;
+    animation-range: entry 0% cover 30%;
 }
 
 @keyframes rightview {
@@ -134,24 +146,28 @@ p {
 }
 
 /* =======================================================================================================================================================================================
-                                                                            HEADER
+                                    HEADER
 ========================================================================================================================================================================================== */
 
 header {
     position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
+    /* left: 0;
+    right: 0; */
     z-index: 1000;
 
     display: flex;
     justify-content: space-between;
 
-    padding: 5px 50px;
+    padding: 5px 30px;
     color: var(--font-color);
+    background-color: inherit;
 
-    background-color: #f1e0c079;
-    backdrop-filter: blur(5px);
+    transition: all 0.3s ease-in-out;
+}
+
+header.hide-header {
+    transform: translateY(-100%);
 }
 
 .header-left-section {
@@ -162,9 +178,12 @@ header {
 
 .header-right-section {
     display: flex;
-    width: 30vw;
-    justify-content: space-between;
+    width: fit-content;
+    ;
+    justify-content: flex-end;
+    gap: 3rem;
     align-items: center;
+    padding: 0 40px;
 }
 
 .header-right-section a {
@@ -177,61 +196,63 @@ header {
 }
 
 .header-right-section a:hover {
-    /* text-decoration: underline; */
-    transform: translateY(-1px);
-    font-size: 1.3rem;
+    text-decoration: underline;
 }
 
 /* =======================================================================================================================================================================================
-                                                                            HOME SECTION
+                                    HOME SECTION
 ========================================================================================================================================================================================== */
 
 .hero-section {
     display: flex;
     justify-content: space-between;
-    padding: 85px 30px 0 30px;
+    padding: 75px 30px 0 30px;
+    font-family: "Open Sans", sans-serif;
 }
+
 
 .hero-left-section {
     display: flex;
     flex-direction: column;
-}
-
-.hero-left-section {
     margin: 0;
-    padding: 0;
+    padding: 90px 35px 0 35px;
 }
 
 .title {
-    font-size: 5.5rem;
-    font-weight: 800;
+    font-size: 4.7rem;
+    font-weight: 750;
 }
 
-.cv-contact-btn-container{
+.designation {
+    font-size: 1.8rem;
+    font-weight: 650;
+}
+
+.cv-contact-btn-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     width: fit-content;
-    padding: 20px 7px;
+    padding: 20px 0px;
 }
 
-.cv-contact{
+.cv-contact {
     background-color: var(--card);
     border-radius: var(--radius-3);
-    padding: 5px 8px;
+    padding: 8px 10px;
     box-shadow: var(--shadow-s);
     color: var(--font-color);
+    font-size: 1rem;
     font-weight: 650;
 }
 
-.cv-contact:active{
-    transform: translateY(1px);
+.cv-contact:active {
     box-shadow: inset 6px 5px 8px 1px rgba(97, 89, 89, 0.263);
 }
 
 .hero-right-section img {
-    height: 75vh;
+    height: 78vh;
     margin-bottom: -6px;
 }
 
@@ -267,7 +288,7 @@ header {
 }
 
 /* =======================================================================================================================================================================================
-                                                                            ABOUT SECTION
+                                    ABOUT SECTION
 ========================================================================================================================================================================================== */
 
 #about {
@@ -308,6 +329,11 @@ header {
     margin: 10px 0;
 }
 
+.about-me p span {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
 .about-me h1 {
     font-family: "Homemade Apple", cursive;
     font-size: 4rem;
@@ -341,15 +367,15 @@ header {
     background-color: var(--card);
     border-radius: var(--radius-1);
     padding: 15px 20px;
-
+    font-family: "Open Sans", sans-serif;
     box-shadow: var(--shadow);
 }
 
 .education h1,
 .skills h1,
 .interests h1 {
-    margin-bottom: 10px;
-    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
     font-weight: 750;
 }
 
@@ -361,6 +387,7 @@ header {
 }
 
 .education-card-row span h4 {
+    font-weight: 600;
     color: var(--muted);
     white-space: nowrap;
 }
@@ -394,11 +421,11 @@ header {
 
 
 /* =======================================================================================================================================================================================
-                                                                            PROJECTS
+                                    PROJECTS
 ========================================================================================================================================================================================== */
 
 #projects {
-    padding: 20px 80px;
+    padding: 20px 0;
 }
 
 .projects-top-sec {
@@ -412,83 +439,99 @@ header {
     text-align: center;
 }
 
-.project-container {
-    margin: 10px auto;
-    padding-block: 80px;
+.project-carousel {
+    display: flex;
+    padding-right: 1em;
+    width: 100%;
+    margin: 70px auto;
+    overflow-x: auto;
+}
 
+.project-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.project-container {
     display: flex;
     justify-content: center;
-    gap: 8rem;
+    align-items: center;
+    gap: 1em;
+    padding-right: 1em;
+    animation: project-scroll 25s infinite linear;
 }
 
-.project-file {
-    background-color: var(--file);
-    height: 35vh;
-    width: 20vw;
-    border-radius: var(--radius-1);
-    padding-top: 10px;
-}
-
-.project-card {
-    height: 100%;
-    width: 95%;
-    margin: 0 auto;
-    background-color: var(--card);
-    border-radius: var(--radius-2);
-
-    padding: 9px 10px;
+.project-cards {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    transition: all 0.3s ease-in-out;
-}
+    gap: 15px;
 
-.project-card:hover {
-    transform: translateY(-180px);
-}
-
-
-.view {
+    flex: 0 0 20vw;
+    padding: 8px;
+    height: 50vh;
+    font-size: 2rem;
     background-color: var(--card);
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow);
+    font-family: "Open Sans", sans-serif;
+}
+
+.project-cards img {
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 11px;
+}
+
+.project-cards>span {
+    font-size: 1.3rem;
+    font-weight: 650;
     color: var(--font-color);
-    text-align: center;
+}
 
+.project-cards span p {
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.view-button {
+    background-color: black;
+    font-size: 1rem;
     padding: 5px;
-    border: 0.5px solid #15223874;
-    border-radius: 30px;
+    border-radius: var(--radius-1);
+
+    text-align: center;
+    align-items: center;
+    color: white;
     cursor: pointer;
-
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-out;
 }
 
-.view:active {
-    transform: scale(0.98);
+.view-button:active {
+    transform: scale(0.99);
 }
 
-.project-cover {
-    height: 26vh;
-    width: 20vw;
-    position: relative;
-    background: linear-gradient(180deg,
-            rgb(248, 210, 154) 0%,
-            rgb(250, 194, 99) 80%);
-    top: -179px;
-    border-radius: 0 20px 20px 20px;
-}
+@keyframes project-scroll {
+    from {
+        translate: 0;
+    }
 
-.project-cover::after {
-    content: "";
-    height: 3.5vh;
-    width: 10vw;
-    position: absolute;
-    top: -21px;
-    border-radius: 20px 50px 0 0;
-    clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
-    background-color: rgb(248, 210, 144);
+    to {
+        translate: -100%;
+    }
 }
 
 /* =======================================================================================================================================================================================
-                                                                            MOBILE VIEW
+                                    FOOTER
+========================================================================================================================================================================================== */
+
+footer {
+    background: #c4b394;
+    height: 15vh;
+    width: 100%;
+}
+
+/* =======================================================================================================================================================================================
+                                    MOBILE VIEW
 ========================================================================================================================================================================================== */
 
 @media (max-width: 600px) {

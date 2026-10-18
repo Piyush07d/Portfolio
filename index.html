@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -37,9 +37,10 @@
             <div class="hero-section">
                 <div class="hero-left-section">
                     <span class="title">
-                        Hello !
-                        <br>
-                        I'm Piyush Dubey
+                        Hello, I'm Piyush !
+                    </span>
+                    <span class="designation">
+                        Computer Engineering Student
                     </span>
                     <span class="cv-contact-btn-container">
                         <a href="assets/Piyush-Dubey.pdf" target="_blank" rel="noopener noreferrer">
@@ -82,11 +83,12 @@
                 </div>
                 <div class="about-me">
                     <h1 class="rightview">Piyush Dubey</h1>
-                    <h2 class="upview">About me</h2>
                     <p class="upview">
+                        <span>About me</span>
+                        <br>
                         I'm a creative developer who enjoys turning ideas into functional and engaging digital
                         experiences. I love exploring new technologies, experimenting with different approaches, and
-                        solving problems through code. For me, development is more than just writing code—it's about
+                        solving problems through code. For me, development is more than just writing code, it's about
                         creating something meaningful from scratch.
                         <br>
                         <br>
@@ -170,19 +172,23 @@
                 <span class="interests upview">
                     <h1>My Interests</h1>
                     <span>
-                        <h3>🤍 Minimalism Connoisseur</h3>
+                        <h4>🤍 Minimalism Connoisseur</h4>
                     </span>
                     <hr class="card-line">
                     <span>
-                        <h3>🍃 Solace in Nature</h3>
+                        <h4>🍃 Solace in Nature</h4>
                     </span>
                     <hr class="card-line">
                     <span>
-                        <h3>🪐 Curiosity Driven</h3>
+                        <h4>🪐 Curiosity Driven</h4>
                     </span>
                     <hr class="card-line">
                     <span>
-                        <h3>🎧 Music Aficionado </h3>
+                        <h4>🎧 Music Aficionado </h4>
+                    </span>
+                    <hr class="card-line">
+                    <span>
+                        <h4>🧩 UI/UX Design</h4>
                     </span>
                 </span>
             </div>
@@ -194,49 +200,175 @@
             <span class="projects-title">
                 <h1 class="scalegrow">✦&nbsp;Projects ✦</h1>
             </span>
-            <div class="project-container leftview">
-                <div class="project-file">
-                    <div class="project-card">
-                        <h3>TimeFold</h3>
+            <div class="project-carousel upview">
+
+                <div class="project-container">
+                    <div class="project-cards">
                         <img src="assets/timefold.png">
-                        <span class="view" onclick="window.open('https://timefold.onrender.com/', '_blank')">
-                            <h4>View</h4>
+                        <span>TimeFold</span>
+                        <span>
+                            <p>TimeFold is a smart timetable management app that helps students stay organized with
+                                class schedules, campus navigation, and important notices.</p>
                         </span>
+                        <a href="https://timefold.onrender.com" target="_blank" rel="noopener noreferrer">
+                            <div class="view-button">
+                                View Project
+                            </div>
+                        </a>
                     </div>
-                    <div class="project-cover">
-
-                    </div>
-                </div>
-
-                <div class="project-file">
-                    <div class="project-card">
-                        <h3>Netflix Clone UI</h3>
+                    <div class="project-cards">
                         <img src="assets/netflix.png">
-                        <span class="view"
-                            onclick="window.open('https://piyush07d.github.io/Netflix-Clone/', '_blank')">
-                            <h4>View</h4>
+                        <span>Netflix Clone UI</span>
+                        <span>
+                            <p>A Netflix-inspired streaming platform UI clone featuring a responsive design and a
+                                familiar, user-friendly interface.</p>
                         </span>
+                        <a href="https://piyush07d.github.io/Netflix-Clone/" target="_blank" rel="noopener noreferrer">
+                            <div class="view-button">
+                                View Project
+                            </div>
+                        </a>
                     </div>
-                    <div class="project-cover">
-
-                    </div>
-                </div>
-
-                <div class="project-file">
-                    <div class="project-card">
-                        <h3>E-Library</h3>
+                    <div class="project-cards">
                         <img src="assets/elibrary.png">
-                        <span class="view" onclick="window.open('https://e-library-prototype.netlify.app/', '_blank')">
-                            <h4>View</h4>
+                        <span>E-Library</span>
+                        <span>
+                            <p>An E-Library web application that simplifies book reservations, new book requests,
+                                complaint management, and online penalty payments.</p>
                         </span>
+                        <a href="https://e-library-prototype.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <div class="view-button">
+                                View Project
+                            </div>
+                        </a>
                     </div>
-                    <div class="project-cover">
-
+                    <div class="project-cards">
+                        <img src="assets/portfolio.png" alt="">
+                        <span>Portfolio</span>
+                        <span>
+                            <p>A personal portfolio website showcasing my skills, projects, education, and achievements
+                                through a creative, responsive design.</p>
+                        </span>
+                        <a href="https://piyushdubey-ten.vercel.app" target="_blank" rel="noopener noreferrer">
+                            <div class="view-button">
+                                View Project
+                            </div>
+                        </a>
                     </div>
                 </div>
+
+                <div aria-hidden class="project-container">
+                    <div class="project-cards">
+                        <img src="assets/timefold.png">
+                        <span>TimeFold</span>
+                        <span>
+                            <p>TimeFold is a smart timetable management app that helps students stay organized with
+                                class schedules, campus navigation, and important notices.</p>
+                        </span>
+                        <a href="https://timefold.onrender.com" target="_blank" rel="noopener noreferrer">
+                            <div class="view-button">
+                                View Project
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-cards">
+                        <img src="assets/netflix.png">
+                        <span>Netflix Clone UI</span>
+                        <span>
+                            <p>A Netflix-inspired streaming platform UI clone featuring a responsive design and a
+                                familiar, user-friendly interface.</p>
+                        </span>
+                        <a href="https://piyush07d.github.io/Netflix-Clone/" target="_blank" rel="noopener noreferrer">
+                            <div class="view-button">
+                                View Project
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-cards">
+                        <img src="assets/elibrary.png">
+                        <span>E-Library</span>
+                        <span>
+                            <p>An E-Library web application that simplifies book reservations, new book requests,
+                                complaint management, and online penalty payments.</p>
+                        </span>
+                        <a href="https://e-library-prototype.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <div class="view-button">
+                                View Project
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-cards">
+                        <img src="assets/portfolio.png" alt="">
+                        <span>Portfolio</span>
+                        <span>
+                            <p>A personal portfolio website showcasing my skills, projects, education, and achievements
+                                through a creative, responsive design.</p>
+                        </span>
+                        <a href="https://piyushdubey-ten.vercel.app" target="_blank" rel="noopener noreferrer">
+                            <div class="view-button">
+                                View Project
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div aria-hidden class="project-container">
+                    <div class="project-cards">
+                        <img src="assets/timefold.png">
+                        <span>TimeFold</span>
+                        <span>
+                            <p>TimeFold is a smart timetable management app that helps students stay organized with
+                                class schedules, campus navigation, and important notices.</p>
+                        </span>
+                        <a href="https://timefold.onrender.com" target="_blank" rel="noopener noreferrer">
+                            <div class="view-button">
+                                View Project
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-cards">
+                        <img src="assets/netflix.png">
+                        <span>Netflix Clone UI</span>
+                        <span>
+                            <p>A Netflix-inspired streaming platform UI clone featuring a responsive design and a
+                                familiar, user-friendly interface.</p>
+                        </span>
+                        <a href="https://piyush07d.github.io/Netflix-Clone/" target="_blank" rel="noopener noreferrer">
+                            <div class="view-button">
+                                View Project
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-cards">
+                        <img src="assets/elibrary.png">
+                        <span>E-Library</span>
+                        <span>
+                            <p>An E-Library web application that simplifies book reservations, new book requests,
+                                complaint management, and online penalty payments.</p>
+                        </span>
+                        <a href="https://e-library-prototype.netlify.app/" target="_blank" rel="noopener noreferrer">
+                            <div class="view-button">
+                                View Project
+                            </div>
+                        </a>
+                    </div>
+                    <div class="project-cards">
+                        <img src="assets/portfolio.png" alt="">
+                        <span>Portfolio</span>
+                        <span>
+                            <p>A personal portfolio website showcasing my skills, projects, education, and achievements
+                                through a creative, responsive design.</p>
+                        </span>
+                        <a href="https://piyushdubey-ten.vercel.app" target="_blank" rel="noopener noreferrer">
+                            <div class="view-button">
+                                View Project
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
-
     </main>
 
     <footer>
