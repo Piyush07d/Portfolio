@@ -441,7 +441,7 @@ header.hide-header {
 
 .project-carousel {
     display: flex;
-    padding-right: 1em;
+    padding-block: 20px;
     width: 100%;
     margin: 70px auto;
     overflow-x: auto;
@@ -525,9 +525,65 @@ header.hide-header {
 ========================================================================================================================================================================================== */
 
 footer {
-    background: #c4b394;
-    height: 15vh;
-    width: 100%;
+    background: #dbc9a8;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px 0 15px;
+    font-family: "Open Sans", sans-serif;
+}
+
+
+.freelance-socialmedia-section{
+    display: flex;
+    justify-content: space-between;
+    
+    font-size: 4rem;
+    font-weight: 800;
+
+    margin-bottom: 50px;
+}
+
+.foot-icons{
+    display: flex;
+    gap: 1rem;
+    margin-right: 100px;
+}
+
+.foot-icons svg{
+    height: 45px;
+}
+
+.contact-infos{
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-infos span{
+    align-items: center;
+    display: flex;
+
+    gap: 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.contact-infos span svg{
+    height: 30px;
+}
+
+.footer-line{
+    margin-block: 5px;
+    background-color: #152238af;
+    border: none;
+    border-radius: 50px;
+    height: 0.5px;
+}
+
+.copyright{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 /* =======================================================================================================================================================================================
