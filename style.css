@@ -130,7 +130,7 @@ p {
 .rightview {
     animation: rightview linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 30%;
+    animation-range: entry 0% cover 40%;
 }
 
 @keyframes rightview {
@@ -300,11 +300,12 @@ header.hide-header {
 
 .about-top-sec {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
 }
 
-.about-top-sec>h1 {
-    display: none;
+.img-aboutme {
+    display: flex;
+    justify-content: space-around;
 }
 
 .my-img {
@@ -312,17 +313,25 @@ header.hide-header {
     height: fit-content;
     width: fit-content;
 
-    margin-top: 85px;
     padding: 5px 5px 30px 5px;
-    /* transform: rotate(-5deg); */
+    transform: rotate(-3deg);
+    margin-top: -80px;
 }
 
 .my-img img {
     height: 60vh;
 }
 
+.about-name h1 {
+    font-family: "Homemade Apple", cursive;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: end;
+    transform: rotate(1deg);
+}
+
 .about-me {
-    width: 90vh;
+    width: 98vh;
 }
 
 .about-me p {
@@ -332,15 +341,6 @@ header.hide-header {
 .about-me p span {
     font-size: 2rem;
     font-weight: 800;
-}
-
-.about-me h1 {
-    font-family: "Homemade Apple", cursive;
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 40px;
-    text-align: end;
-    transform: rotate(1deg);
 }
 
 .about-bottom-sec {
@@ -379,14 +379,14 @@ header.hide-header {
     font-weight: 750;
 }
 
-.education-card-row,
+.education-row,
 .beyond span {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
 }
 
-.education-card-row span h4 {
+.education-row span h4 {
     font-weight: 600;
     color: var(--muted);
     white-space: nowrap;
@@ -534,32 +534,32 @@ footer {
 }
 
 
-.freelance-socialmedia-section{
+.freelance-socialmedia-section {
     display: flex;
     justify-content: space-between;
-    
+
     font-size: 4rem;
     font-weight: 800;
 
     margin-bottom: 50px;
 }
 
-.foot-icons{
+.foot-icons {
     display: flex;
     gap: 1rem;
     margin-right: 100px;
 }
 
-.foot-icons svg{
+.foot-icons svg {
     height: 45px;
 }
 
-.contact-infos{
+.contact-infos {
     display: flex;
     justify-content: space-around;
 }
 
-.contact-infos span{
+.contact-infos span {
     align-items: center;
     display: flex;
 
@@ -568,11 +568,11 @@ footer {
     font-weight: 600;
 }
 
-.contact-infos span svg{
+.contact-infos span svg {
     height: 30px;
 }
 
-.footer-line{
+.footer-line {
     margin-block: 5px;
     background-color: #152238af;
     border: none;
@@ -580,7 +580,7 @@ footer {
     height: 0.5px;
 }
 
-.copyright{
+.copyright {
     text-align: center;
     font-size: 1rem;
     font-weight: 600;
@@ -590,22 +590,32 @@ footer {
                                     MOBILE VIEW
 ========================================================================================================================================================================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
     /* GLOBAL CONFIGS */
+
+    :root {
+        --radius-3: 5px;
+    }
 
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    *:hover {
+        transition: none;
     }
 
     body {
         font-size: 1rem;
     }
 
-    /* HEADER */
-
+    /* =======================================================================================================================================================================================
+                                    HEADER
+========================================================================================================================================================================================== */
     header {
         display: flex;
         justify-content: center;
@@ -622,51 +632,70 @@ footer {
         display: none;
     }
 
+    /* =======================================================================================================================================================================================
+                                    HOME
+========================================================================================================================================================================================== */
 
-    /* HOME */
-
-    .top-home {
-        margin-top: 5vh;
+    .hero-section {
+        padding: 50px 15px;
     }
 
-    .bottom-home {
-        margin-top: 14vh;
+    .hero-left-section {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
-    #typing-text,
-    .cursor {
-        font-size: 8vw;
+    .title {
+        font-size: 2.5rem;
     }
 
-    .home-img img {
-        height: 43vh;
+    .designation {
+        font-size: 1.3rem;
     }
 
-    /* ABOUT */
+    .cv-contact-btn-container {
+        padding: 10px auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+    }
+
+    .cv-contact {
+        padding: 5px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+        padding-top: 70px;
+    }
+
+    .hero-right-section {
+        padding-top: 40px;
+        display: flex;
+        margin-bottom: -44px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-right-section img {
+        height: 45vh;
+    }
+
+    /* =======================================================================================================================================================================================
+                                    ABOUT ME
+========================================================================================================================================================================================== */
 
     #about {
-        padding: 20px 10px;
-        width: 100vw;
-        gap: 0rem;
-    }
-
-    .about-top-sec h1 {
-        display: block;
-        font-family: "Homemade Apple", cursive;
-        font-size: 2rem;
-        font-weight: 700;
-        text-align: right;
-        transform: rotate(6deg);
-    }
-
-    .my-img {
-        margin-top: 30px;
-        margin-left: 20px;
-        transform: rotate(-5deg);
-    }
-
-    .my-img img {
-        height: 30vh;
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
     }
 
     .about-top-sec {
@@ -674,21 +703,32 @@ footer {
         flex-direction: column;
     }
 
+    .about-name h1 {
+        font-size: 2rem;
+    }
+
+    .img-aboutme {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .my-img {
+        margin-top: 20px;
+        margin-left: 20px;
+        transform: rotate(-5deg);
+    }
+
+    .my-img img {
+        height: 35vh;
+    }
+
     .about-me {
-        width: 100vw;
-        margin: 50px auto;
-    }
-
-    .about-me h1 {
-        display: none;
-    }
-
-    .about-me h2 {
-        font-size: 1.8rem;
+        margin: 30px auto;
+        width: 94vw;
     }
 
     .about-me p {
-        font-size: 15px;
+        font-size: 1.1rem;
     }
 
     .about-bottom-sec {
@@ -698,9 +738,98 @@ footer {
     }
 
     .education,
-    .skills {
+    .skills,
+    .interests {
         width: 100%;
-        height: fit-content;
-        padding: 15px 14px;
+        padding: 15px 10px;
+        height: 300px;
+    }
+
+    .education h1,
+    .skills h1,
+    .interests h1 {
+        font-size: 2rem;
+    }
+
+    .education-row span h3 {
+        font-size: 17px;
+        font-weight: 650;
+    }
+
+    .education-row span h4 {
+        font-weight: 600;
+        font-size: 15px;
+
+    }
+
+    .project-carousel {
+        margin: 50px auto;
+    }
+
+    .projects-title h1 {
+        font-size: 2rem;
+    }
+
+    .project-cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 8px;
+        width: 350px;
+        height: 45vh;
+    }
+
+    .view-button {
+        background-color: black;
+        font-size: 1rem;
+        padding: 5px;
+        border-radius: var(--radius-1);
+        text-align: center;
+        align-items: center;
+        color: white;
+        cursor: pointer;
+        transition: all 0.1s ease-out;
+    }
+
+    .freelance-socialmedia-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        font-size: 2.8rem;
+        font-weight: 700;
+
+        margin-bottom: 30px;
+    }
+
+    .foot-icons {
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+    }
+
+    .contact-infos {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .contact-infos span svg {
+        height: 25px;
+    }
+
+    .contact-infos span {
+        align-items: center;
+        display: flex;
+        gap: 20px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 13px;
+        font-weight: 500;
     }
 }

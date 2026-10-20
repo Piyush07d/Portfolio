@@ -1,31 +1,4 @@
 // --------------------------------------------------------------------------------------------------------------------------------------
-//                              Header
-// --------------------------------------------------------------------------------------------------------------------------------------
-
-const header = document.querySelector("header");
-
-let lastScrollY = window.scrollY;
-
-window.addEventListener("scroll", () => {
-    const currentScrollY = window.scrollY;
-
-    // Always show the header at the top
-    if (currentScrollY <= 50) {
-        header.classList.remove("hide-header");
-    }
-    // Hide when scrolling down
-    else if (currentScrollY > lastScrollY) {
-        header.classList.add("hide-header");
-    }
-    // Show when scrolling up
-    else if (currentScrollY < lastScrollY) {
-        header.classList.remove("hide-header");
-    }
-
-    lastScrollY = currentScrollY;
-});
-
-// --------------------------------------------------------------------------------------------------------------------------------------
 //                              Carousel 
 // --------------------------------------------------------------------------------------------------------------------------------------
 
