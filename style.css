@@ -859,11 +859,6 @@ footer {
 
 @media (max-width: 400px) {
     .project-cards {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 8px;
-        width: 350px;
         height: 55vh;
     }
 }
