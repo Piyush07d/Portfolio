@@ -31,6 +31,7 @@ a {
 .cloud {
     height: 150px;
     animation: cloud 3s infinite ease-in-out;
+    z-index: 0;
 }
 
 @keyframes cloud {
@@ -76,6 +77,16 @@ a {
     left: 0;
 }
 
+.cloud6 {
+    position: absolute;
+    right: 0;
+}
+
+.cloud7 {
+    margin-top: -50px;
+    position: absolute;
+}
+
 /* ============================== HEADER ============================== */
 
 header {
@@ -92,7 +103,7 @@ header {
     margin: 10px auto;
     width: 60vw;
 
-    background: rgba(255, 255, 255, 0.136);
+    background: rgba(255, 255, 255, 0.241);
     backdrop-filter: blur(5px) saturate(100%);
     -webkit-backdrop-filter: blur(5px) saturate(100%);
 
@@ -181,7 +192,7 @@ header {
 /* ============================== ABOUT ============================== */
 
 #about {
-    padding: 150px 90px 10vh 90px;
+    padding: 150px 100px;
 
     display: flex;
     justify-content: space-between;
@@ -210,11 +221,13 @@ header {
 
 .imgcard {
     padding: 10px 10px 10px 10px;
-    background-color: white;
+    background-color: var(--primary);
     border-radius: 20px;
     z-index: 900;
     position: relative;
     text-align: center;
+    margin-right: 60px;
+    border: 1px solid rgb(203, 192, 192);
 }
 
 .imgcard img {
@@ -232,7 +245,7 @@ header {
 /* ============================== SKILLS ============================== */
 
 #skills {
-    padding: 10vh 10vw;
+    padding: 10vh 6vw;
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
@@ -280,7 +293,7 @@ header {
 }
 
 .logoContainer span {
-    background-color: white;
+    background-color: var(--primary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -294,7 +307,7 @@ header {
 
 #projects {
     margin-top: 10vh;
-    padding: 10vh 10vw;
+    padding: 10vh 5vw;
 }
 
 .projectHeading {
@@ -303,19 +316,34 @@ header {
     text-align: center;
 }
 
+.projectContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
 .projectCard {
-    background-color: white;
+    background-color: var(--primary);
     color: black;
     height: 55vh;
     width: 21vw;
     border-radius: 20px;
     padding: 10px;
     margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 3px 3px 9px 0px rgba(132, 127, 127, 0.495);
+    position: relative;
+    z-index: 1;
+
 }
 
 .projectImgContainer {
     width: 100%;
-    height: 190px;
+    height: 175px;
+    flex-shrink: 0;
     overflow: hidden;
 }
 
@@ -327,11 +355,14 @@ header {
     border-radius: 15px;
 }
 
-.projectTitle,
-.projectDescription {
+.projectTitle {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 10px;
+}
+
+.projectDescription {
     margin: 10px;
 }
 
@@ -346,17 +377,84 @@ header {
     color: rgba(0, 0, 0, 0.512);
 }
 
+.projectCard > a {
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+}
+
 .viewButton {
-    color: white;
+    color: var(--primary);
     text-align: center;
     background-color: black;
     border-radius: 25px;
     width: 98%;
     padding: 5px;
-    margin: 0px auto;
+    margin-top: auto;
+    /* margin-bottom: 5px; */
     cursor: pointer;
 }
 
 .viewButton:active {
     transform: scale(0.995);
+}
+
+/* ============================== FOOTER ============================== */
+
+#footer {
+    height: 45vh;
+    width: 100%;
+    background-color: var(--primary);
+    border-radius: 30px 30px 0 0;
+    color: black;
+    padding: 30px 30px 0px 30px;
+
+    position: relative;
+    z-index: 1;
+}
+
+.fhead {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.topFooter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.sociallinks {
+    display: flex;
+    gap: 25px;
+    margin-right: 80px;
+}
+
+.sociallinks svg {
+    height: 45px;
+}
+
+.bottomFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10vw;
+
+    font-size: 1.1rem;
+    font-weight: 550;
+}
+
+.foot {
+    height: 0.5px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.238);
+}
+
+.copyright {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    font-size: 15px;
 }
