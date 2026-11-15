@@ -258,6 +258,8 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    position: relative;
+    z-index: 10;
 }
 
 .skillsHeading {
@@ -377,7 +379,7 @@ header {
     color: rgba(0, 0, 0, 0.512);
 }
 
-.projectCard > a {
+.projectCard>a {
     display: flex;
     width: 100%;
     margin-top: auto;
@@ -457,4 +459,520 @@ header {
     align-items: center;
     margin: 5px;
     font-size: 15px;
+}
+
+/* ============================== RESPONSIVE DESIGN ============================== */
+
+/* TABLETS AND SMALL LAPTOPS */
+@media (max-width: 1100px) {
+
+    /* Header */
+    header {
+        width: 80%;
+    }
+
+    .nav {
+        gap: 20px;
+    }
+
+    /* Home */
+    .portfolio {
+        font-size: clamp(8rem, 18vw, 13rem);
+    }
+
+    .computer {
+        font-size: clamp(2.3rem, 5vw, 3.5rem);
+        margin-top: -5vw;
+    }
+
+    /* About */
+    #about {
+        gap: 4vw;
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
+
+    .leftAboutsec {
+        width: 50%;
+    }
+
+    .about {
+        font-size: 3.5rem;
+    }
+
+    .imgcard {
+        margin-right: 0;
+    }
+
+    .imgcard img {
+        max-width: 100%;
+        height: auto;
+        max-height: 45vh;
+        object-fit: cover;
+    }
+
+    /* Skills */
+    #skills {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 45px;
+    }
+
+    .education,
+    .skills,
+    .langauges {
+        flex: 1 1 40%;
+        min-width: 250px;
+    }
+
+    /* Projects */
+    .projectContainer {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 25px;
+    }
+
+    .projectCard {
+        width: 100%;
+        height: auto;
+        min-height: 440px;
+        margin-top: 50px;
+    }
+
+    /* Footer */
+    #footer {
+        height: auto;
+    }
+
+    .bottomFooter {
+        padding-left: 3vw;
+        padding-right: 3vw;
+        gap: 20px;
+    }
+}
+
+
+/* ============================== MOBILE DEVICES ============================== */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+        width: calc(100% - 28px);
+        padding: 12px 20px;
+        margin: 10px 14px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 40px;
+    }
+
+    .left-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    /* HOME */
+    #home {
+        height: 100vh;
+        height: 100svh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        position: relative;
+        isolation: isolate;
+    }
+
+    .portfolio {
+        width: 100%;
+        font-size: clamp(4rem, 17vw, 8rem);
+        line-height: 1.1;
+        white-space: nowrap;
+    }
+
+    .computer {
+        max-width: 100%;
+        font-size: clamp(1.7rem, 6vw, 2.8rem);
+        line-height: 1.2;
+        margin-top: 0;
+    }
+
+    .scroll {
+        position: absolute;
+        bottom: 30px;
+        z-index: 2;
+    }
+
+    /* CLOUDS */
+    .cloud {
+        height: auto;
+        max-width: 45vw;
+        pointer-events: none;
+    }
+
+    .cloud1 {
+        top: 8%;
+        left: 0;
+    }
+
+    .cloud2 {
+        right: 0;
+        bottom: 0;
+    }
+
+    /* Keep home content above clouds */
+    .portfolio,
+    .computer {
+        position: relative;
+        z-index: 1;
+    }
+
+
+    /* ABOUT */
+    #about {
+        position: relative;
+        isolation: isolate;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        gap: 35px;
+        padding: 100px 6vw 65px;
+    }
+
+    .leftAboutsec {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about {
+        font-size: clamp(2.7rem, 10vw, 3.8rem);
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .about-me {
+        width: 100%;
+        max-width: 650px;
+        font-size: 1rem;
+        line-height: 1.7;
+        word-spacing: 1px;
+        letter-spacing: 0.3px;
+        text-align: center;
+    }
+
+    .rightAboutsec {
+        position: relative;
+        width: 100%;
+        padding-top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imgcard {
+        width: min(80%, 360px);
+        margin: 0;
+    }
+
+    .imgcard img {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 430px;
+        object-fit: cover;
+    }
+
+    .imgcard p {
+        font-size: clamp(1.8rem, 7vw, 2.3rem);
+    }
+
+    /* About clouds */
+    .cloud3 {
+        left: auto;
+        right: -6vw;
+        bottom: -100px;
+        max-width: 40vw;
+    }
+
+    .cloud4 {
+        left: 0vw;
+        bottom: -80px;
+        max-width: 40vw;
+        z-index: -1;
+    }
+
+
+    /* EDUCATION, SKILLS AND TECH STACK */
+    #skills {
+        position: relative;
+        isolation: isolate;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        gap: 45px;
+        padding: 50px 7vw 75px;
+    }
+
+    .education,
+    .skills,
+    .langauges {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skillsHeading {
+        font-size: clamp(2.2rem, 8vw, 2.8rem);
+        padding-bottom: 20px;
+    }
+
+    .row-container1,
+    .row-container2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .row {
+        font-size: 1.08rem;
+        line-height: 1.45;
+    }
+
+    .muted-row {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .row-container2 {
+        font-size: 1rem;
+    }
+
+    .logoContainer {
+        width: min(100%, 340px);
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .logoContainer span {
+        min-width: 0;
+    }
+
+    .langLogo {
+        height: clamp(32px, 9vw, 42px);
+        max-width: 100%;
+    }
+
+    .cloud5 {
+        position: absolute;
+        left: 0;
+        right: auto;
+        top: 100%;
+        bottom: auto;
+        max-width: 42vw;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+
+    /* PROJECTS */
+    #projects {
+        position: relative;
+        isolation: isolate;
+        padding: 65px 7vw 80px;
+    }
+
+    .projectHeading {
+        font-size: clamp(2.7rem, 10vw, 3.7rem);
+        text-align: center;
+    }
+
+    .projectContainer {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+    }
+
+    .projectCard {
+        width: min(100%, 430px);
+        height: auto;
+        min-height: 0;
+        margin-top: 25px;
+        align-self: center;
+    }
+
+    .projectImgContainer {
+        width: 100%;
+        height: clamp(155px, 48vw, 220px);
+    }
+
+    .projectImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .projectTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .projectDescription {
+        line-height: 1.6;
+    }
+
+    .projectCard>a {
+        width: 100%;
+    }
+
+    .viewButton {
+        width: 100%;
+    }
+
+    .cloud6 {
+        right: 0;
+        left: auto;
+        max-width: 40vw;
+    }
+
+    .cloud7 {
+        max-width: 48vw;
+    }
+
+
+    /* FOOTER */
+    #footer {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 35px 7vw 20px;
+    }
+
+    .topFooter {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .fhead {
+        font-size: clamp(1.8rem, 7vw, 2.4rem);
+        line-height: 1.2;
+    }
+
+    .sociallinks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+        margin: 0;
+    }
+
+    .sociallinks svg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .bottomFooter {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        padding: 10px 0 22px;
+        text-align: center;
+        font-size: 0.95rem;
+        overflow-wrap: anywhere;
+    }
+
+    .foot {
+        width: 100%;
+    }
+
+    .copyright {
+        text-align: center;
+        margin: 14px 0 0;
+    }
+
+
+    /* CONTENT ABOVE DECORATIVE CLOUDS */
+    #about>*,
+    #skills>*,
+    #projects>* {
+        z-index: 1;
+    }
+
+    .imgcard,
+    .projectCard {
+        z-index: 2;
+    }
+}
+
+
+/* ============================== SMALL MOBILE DEVICES ============================== */
+
+@media (max-width: 380px) {
+
+    header {
+        padding: 11px 16px;
+    }
+
+    .portfolio {
+        font-size: 16vw;
+    }
+
+    .computer {
+        font-size: 1.6rem;
+    }
+
+    #about {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .logoContainer {
+        gap: 9px;
+    }
+
+    .projectCard {
+        width: 100%;
+    }
+
+    .bottomFooter {
+        font-size: 0.88rem;
+    }
+
 }
