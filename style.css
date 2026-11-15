@@ -1,5 +1,6 @@
 :root {
-    -bg: rgb(249, 244, 244);
+    --bg: #5cbaf5;
+    --primary: #ffffff;
 }
 
 .dark-theme {
@@ -12,6 +13,11 @@
     box-sizing: border-box;
 }
 
+body {
+    color: var(--primary);
+    background-color: var(--bg);
+}
+
 section {
     padding: 0 3vw;
 }
@@ -19,6 +25,55 @@ section {
 a {
     text-decoration: none;
     color: var(--ink);
+}
+
+
+.cloud {
+    height: 150px;
+    animation: cloud 3s infinite ease-in-out;
+}
+
+@keyframes cloud {
+    0% {
+        transform: translateY(-2px);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+.cloud1 {
+    position: absolute;
+    top: 6%;
+    left: -8px;
+}
+
+.cloud2 {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.cloud3 {
+    position: absolute;
+    left: 410px;
+    bottom: -286px;
+}
+
+.cloud4 {
+    position: absolute;
+    bottom: -750px;
+    right: 300px;
+}
+
+.cloud5 {
+    position: absolute;
+    left: 0;
 }
 
 /* ============================== HEADER ============================== */
@@ -29,6 +84,7 @@ header {
     left: 0;
     right: 0;
     z-index: 1000;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,30 +92,17 @@ header {
     margin: 10px auto;
     width: 60vw;
 
-    border-radius: 100px;
-    background: rgba(255, 255, 255, 0.315);
-    backdrop-filter: blur(20px) saturate(160%);
-    -webkit-backdrop-filter: blur(100px) saturate(160%);
-    box-shadow: 1px 2px 15px rgba(72, 70, 70, 0.133),
-        inset 0 1px 2px rgba(255, 255, 255, 0.403);
+    background: rgba(255, 255, 255, 0.136);
+    backdrop-filter: blur(5px) saturate(100%);
+    -webkit-backdrop-filter: blur(5px) saturate(100%);
 
+    border: 1px solid rgba(255, 255, 255, 0.174);
+    border-radius: 50px;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
-
-
-/* header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 50px;
-    margin: 10px auto;
-} */
-
 
 .logo {
     height: 20px;
@@ -87,46 +130,233 @@ header {
 /* ============================== HOME ============================== */
 
 #home {
-    /* background: linear-gradient(180deg,
-            rgba(255, 190, 86, 0.899) 10%,
-            rgba(244, 206, 136, 0.908) 70%,
-            rgba(244, 214, 159, 0.907) 85%,
-            rgb(235, 222, 222) 100%); */
-
     background: linear-gradient(180deg,
-            rgba(86, 199, 255, 0.899) 10%,
-            rgba(136, 208, 244, 0.908) 70%,
-            rgba(159, 237, 244, 0.907) 85%,
-            rgb(235, 222, 222) 100%);
-
+            rgb(38, 82, 244) 10%,
+            rgb(61, 132, 238) 40%,
+            rgb(79, 171, 251) 80%,
+            #5cbaf5 100%);
     height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     flex-direction: column;
 }
+
 
 .portfolio {
     font-size: 15rem;
     font-weight: 550;
-    color: white;
-    text-shadow: 2px 2px 7px #2785b4b0;
+    color: var(--primary);
+    text-shadow: 2px 2px 7px #4a5b4872;
 }
 
-.logoContainer {
+.computer {
+    margin-top: -80px;
+    color: #5a4e93;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
 
+.scroll {
     position: absolute;
-    inset: 0;
-    z-index: 3;
+    bottom: 30px;
+    animation: scrolling 1.5s infinite ease-in-out;
 }
 
-.logo img {
-    height: 40px;
+@keyframes scrolling {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
 }
+
 /* ============================== ABOUT ============================== */
 
 #about {
-    height: 100vh;
-    background-color: rgb(235, 222, 222);
+    padding: 150px 90px 10vh 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.leftAboutsec {
+    width: 45vw;
+}
+
+.about {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.about-me {
+    font-size: 1.1rem;
+    word-spacing: 3px;
+    letter-spacing: 1px;
+}
+
+.rightAboutsec {
+    padding-top: 50px;
+}
+
+.imgcard {
+    padding: 10px 10px 10px 10px;
+    background-color: white;
+    border-radius: 20px;
+    z-index: 900;
+    position: relative;
+    text-align: center;
+}
+
+.imgcard img {
+    height: 50vh;
+    border-radius: 15px;
+}
+
+.imgcard p {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: rgb(2, 12, 41);
+    margin-top: 10px;
+}
+
+/* ============================== SKILLS ============================== */
+
+#skills {
+    padding: 10vh 10vw;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    text-align: left;
+}
+
+.education,
+.skills,
+.languages {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.skillsHeading {
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 25px;
+}
+
+.row-container1 {
+    padding: 5px 0;
+}
+
+.row {
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding-bottom: 2px;
+}
+
+.row-container2 {
+    padding: 3px 0;
+    font-size: 1.1rem;
+    font-weight: 550;
+}
+
+.langLogo {
+    height: 45px;
+}
+
+.logoContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.logoContainer span {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 10px;
+    color: black;
+}
+
+/* ============================== PROJECTS ============================== */
+
+#projects {
+    margin-top: 10vh;
+    padding: 10vh 10vw;
+}
+
+.projectHeading {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.projectCard {
+    background-color: white;
+    color: black;
+    height: 55vh;
+    width: 21vw;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+.projectImgContainer {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+}
+
+.projectImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+
+.projectTitle,
+.projectDescription {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+
+.number {
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: rgba(0, 0, 0, 0.512);
+}
+
+.viewButton {
+    color: white;
+    text-align: center;
+    background-color: black;
+    border-radius: 25px;
+    width: 98%;
+    padding: 5px;
+    margin: 0px auto;
+    cursor: pointer;
+}
+
+.viewButton:active {
+    transform: scale(0.995);
 }
