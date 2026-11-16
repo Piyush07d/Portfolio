@@ -162,10 +162,10 @@ header {
     text-shadow: 2px 2px 7px #4a5b4872;
 }
 
-.computer {
-    margin-top: -80px;
+.portfolioSub {
+    margin-top: -100px;
     color: #5a4e93;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     font-weight: 600;
 }
 
@@ -213,6 +213,22 @@ header {
     font-size: 1.1rem;
     word-spacing: 3px;
     letter-spacing: 1px;
+}
+
+#resume {
+    border: none;
+    margin: 20px 0px;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 15px;
+
+    box-shadow: 3px 3px 7px rgba(142, 135, 135, 0.551);
+}
+
+#resume:active {
+    box-shadow: inset 4px 5px 5px 1px rgba(142, 135, 135, 0.551);
+    transform: translateY(1px);
 }
 
 .rightAboutsec {
@@ -404,7 +420,7 @@ header {
 /* ============================== FOOTER ============================== */
 
 #footer {
-    height: 45vh;
+    height: fit-content;
     width: 100%;
     background-color: var(--primary);
     border-radius: 30px 30px 0 0;
