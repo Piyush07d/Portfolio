@@ -8,4 +8,24 @@ html {
 
 .font2 {
     font-family: "League Script", cursive;
-}   
+}
+
+.aScroll {
+    animation: aboutScroll ease-in-out;
+    animation-timeline: scroll();
+    animation-range: 0% 33%;
+}
+
+@keyframes aboutScroll {
+    0% {
+        opacity: 0.1;
+        filter: blur(5px);
+        transform: translateY(500px);
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}

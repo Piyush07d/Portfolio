@@ -16,7 +16,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;``
 }
 
 body {
@@ -36,21 +36,21 @@ a {
 
 .cloud {
     height: 150px;
-    animation: cloud 3s infinite ease-in-out;
+    animation: cloud 2s infinite ease-in-out;
     z-index: 0;
 }
 
 @keyframes cloud {
     0% {
-        transform: translateY(-2px);
+        transform: translateY(-3px);
     }
 
     50% {
-        transform: translateY(2px);
+        transform: translateY(3px);
     }
 
     100% {
-        transform: translateY(-2px);
+        transform: translateY(-3px);
     }
 }
 
@@ -79,8 +79,10 @@ a {
 }
 
 .cloud5 {
-    position: absolute;
+    position: relative;
     left: 0;
+    bottom: 0;
+    top: 100%;
 }
 
 .cloud6 {
@@ -101,7 +103,7 @@ header {
     left: 0;
     right: 0;
     z-index: 1000;
-    color: black;
+    color: var(--primary);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -109,9 +111,9 @@ header {
     margin: 10px auto;
     width: 60vw;
 
-    background: rgba(255, 255, 255, 0.241);
-    backdrop-filter: blur(5px) saturate(100%);
-    -webkit-backdrop-filter: blur(5px) saturate(100%);
+    background: rgba(255, 255, 255, 0.158);
+    backdrop-filter: blur(3px) saturate(160%);
+    -webkit-backdrop-filter: blur(3px) saturate(160%);
 
     border: 1px solid rgba(255, 255, 255, 0.174);
     border-radius: 50px;
@@ -141,7 +143,6 @@ header {
 }
 
 .navButton {
-    /* background-color: #5a4e93; */
     width: fit-content;
     padding: 0 1px;
     position: relative;
@@ -157,13 +158,16 @@ header {
     width: 0%;
     height: 2px;
     margin: 0;
-    background-color: rgb(5, 51, 150);
-    transition: 0.2s all ease-in-out;
+    background-color: var(--primary);
+    transition: 0.1s all ease-in-out;
+    transform: scaleX(0);
+    width: 100%;
 }
 
 .navButton:hover:after,
 .navButton.active::after {
-    width: 100%;
+    transform: scaleX(1);
+    transform-origin: center;
 }
 
 
@@ -189,6 +193,7 @@ header {
     font-weight: 550;
     color: var(--primary);
     text-shadow: 2px 2px 7px #4a5b4872;
+    animation: homeLoading 0.5s;
 }
 
 .portfolioSub {
@@ -196,12 +201,27 @@ header {
     color: #5a4e93;
     font-size: 4.5rem;
     font-weight: 600;
+    animation: homeLoading 0.5s ease-in-out;
+}
+
+@keyframes homeLoading {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
 }
 
 .scroll {
     position: absolute;
     bottom: 30px;
     animation: scrolling 1.5s infinite ease-in-out;
+    animation: homeLoading 0.5s;
 }
 
 @keyframes scrolling {
@@ -254,8 +274,7 @@ header {
     width: fit-content;
     background-color: var(--primary);
     color: black;
-
-    box-shadow: 3px 3px 7px rgba(142, 135, 135, 0.551);
+    box-shadow: 2px 2px 7px rgba(167, 153, 153, 0.447);
 }
 
 .cv:active {
@@ -308,6 +327,24 @@ header {
     flex-direction: column;
     position: relative;
     z-index: 10;
+
+    animation: skillsScroll ease-in-out;
+    animation-timeline: scroll();
+    animation-range: 0% 60%;
+}
+
+@keyframes skillsScroll {
+    from {
+        transform: translateY(500px);
+        filter: blur(10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
 }
 
 .skillsHeading {
@@ -356,7 +393,7 @@ header {
 /* ============================== PROJECTS ============================== */
 
 #projects {
-    margin-top: 10vh;
+    /* margin-top: 10vh; */
     padding: 10vh 5vw;
 }
 
@@ -388,6 +425,21 @@ header {
     position: relative;
     z-index: 1;
 
+    animation: projectCardsScroll ease-in-out;
+    animation-timeline: scroll();
+    animation-range: 0% 50%;
+}
+
+@keyframes projectCardsScroll {
+    from {
+        transform: translateY(50px);
+        opacity: 0.1;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .projectImgContainer {
@@ -461,6 +513,7 @@ header {
 
     position: relative;
     z-index: 1;
+    margin: 0 !important;
 }
 
 .fhead {
@@ -569,7 +622,7 @@ header {
 
     .education,
     .skills,
-    .langauges {
+    .languages {
         flex: 1 1 40%;
         min-width: 250px;
     }
@@ -783,7 +836,7 @@ header {
 
     .education,
     .skills,
-    .langauges {
+    .langueges {
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -833,11 +886,10 @@ header {
     }
 
     .cloud5 {
-        position: absolute;
+        position: relative;
         left: 0;
-        right: auto;
         top: 100%;
-        bottom: auto;
+        bottom: 0%;
         max-width: 42vw;
         z-index: 0;
         pointer-events: none;
