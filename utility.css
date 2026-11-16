@@ -1,7 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .font1 {
     font-family: "Google Sans Flex", sans-serif;
 }
 
 .font2 {
     font-family: "League Script", cursive;
-}
+}   

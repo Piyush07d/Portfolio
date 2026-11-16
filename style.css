@@ -11,6 +11,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth !important;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -134,9 +140,32 @@ header {
     font-size: 13px;
 }
 
-.navButton:hover {
-    text-decoration: underline;
+.navButton {
+    /* background-color: #5a4e93; */
+    width: fit-content;
+    padding: 0 1px;
+    position: relative;
+    margin: 0;
 }
+
+.navButton:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    border-radius: 50px;
+    width: 0%;
+    height: 2px;
+    margin: 0;
+    background-color: rgb(5, 51, 150);
+    transition: 0.2s all ease-in-out;
+}
+
+.navButton:hover:after,
+.navButton.active::after {
+    width: 100%;
+}
+
 
 /* ============================== HOME ============================== */
 
@@ -215,18 +244,21 @@ header {
     letter-spacing: 1px;
 }
 
-#resume {
+.cv {
     border: none;
     margin: 20px 0px;
     border-radius: 8px;
     padding: 5px 10px;
     cursor: pointer;
     font-size: 15px;
+    width: fit-content;
+    background-color: var(--primary);
+    color: black;
 
     box-shadow: 3px 3px 7px rgba(142, 135, 135, 0.551);
 }
 
-#resume:active {
+.cv:active {
     box-shadow: inset 4px 5px 5px 1px rgba(142, 135, 135, 0.551);
     transform: translateY(1px);
 }
@@ -496,9 +528,10 @@ header {
         font-size: clamp(8rem, 18vw, 13rem);
     }
 
-    .computer {
-        font-size: clamp(2.3rem, 5vw, 3.5rem);
+    .portfolioSub {
+        font-size: clamp(2rem, 5vw, 3.5rem);
         margin-top: -5vw;
+        z-index: 100;
     }
 
     /* About */
@@ -618,7 +651,7 @@ header {
         white-space: nowrap;
     }
 
-    .computer {
+    .portfolioSub {
         max-width: 100%;
         font-size: clamp(1.7rem, 6vw, 2.8rem);
         line-height: 1.2;
@@ -650,7 +683,7 @@ header {
 
     /* Keep home content above clouds */
     .portfolio,
-    .computer {
+    .portfolioSub {
         position: relative;
         z-index: 1;
     }
@@ -970,7 +1003,7 @@ header {
         font-size: 16vw;
     }
 
-    .computer {
+    .portfolioSub {
         font-size: 1.6rem;
     }
 
@@ -991,4 +1024,18 @@ header {
         font-size: 0.88rem;
     }
 
+}
+
+/* Hover effects only on devices with a mouse */
+@media (hover: hover) and (pointer: fine) {
+    /* Keep your existing hover styles here */
+}
+
+/* Disable hover on touchscreens */
+@media (hover: none) and (pointer: coarse) {
+    *:hover {
+        transform: none;
+        box-shadow: none;
+        filter: none;
+    }
 }
