@@ -100,6 +100,12 @@ a {
     flex-direction: column;
     text-align: center;
     height: 100vh;
+
+    background: linear-gradient(180deg,
+            rgb(38, 82, 244) 10%,
+            rgb(61, 132, 238) 40%,
+            rgb(79, 171, 251) 80%,
+            #5cbaf5 100%);
 }
 
 .logoLoading {
@@ -137,7 +143,6 @@ a {
 .main {
     display: none;
     opacity: 0;
-    filter: blur(10px);
 }
 
 .main.show {
@@ -148,7 +153,6 @@ a {
 @keyframes fadeIn {
     to {
         opacity: 1;
-        filter: blur(0);
     }
 }
 
