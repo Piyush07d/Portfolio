@@ -16,7 +16,7 @@
 }
 
 html {
-    scroll-behavior: smooth;``
+    scroll-behavior: smooth;
 }
 
 body {
@@ -193,7 +193,6 @@ header {
     font-weight: 550;
     color: var(--primary);
     text-shadow: 2px 2px 7px #4a5b4872;
-    animation: homeLoading 0.5s;
 }
 
 .portfolioSub {
@@ -201,27 +200,12 @@ header {
     color: #5a4e93;
     font-size: 4.5rem;
     font-weight: 600;
-    animation: homeLoading 0.5s ease-in-out;
-}
-
-@keyframes homeLoading {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-        filter: blur(0);
-    }
 }
 
 .scroll {
     position: absolute;
     bottom: 30px;
     animation: scrolling 1.5s infinite ease-in-out;
-    animation: homeLoading 0.5s;
 }
 
 @keyframes scrolling {
@@ -327,24 +311,6 @@ header {
     flex-direction: column;
     position: relative;
     z-index: 10;
-
-    animation: skillsScroll ease-in-out;
-    animation-timeline: scroll();
-    animation-range: 0% 60%;
-}
-
-@keyframes skillsScroll {
-    from {
-        transform: translateY(500px);
-        filter: blur(10px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0px);
-        filter: blur(0px);
-        opacity: 1;
-    }
 }
 
 .skillsHeading {
@@ -424,22 +390,6 @@ header {
     box-shadow: 3px 3px 9px 0px rgba(132, 127, 127, 0.495);
     position: relative;
     z-index: 1;
-
-    animation: projectCardsScroll ease-in-out;
-    animation-timeline: scroll();
-    animation-range: 0% 50%;
-}
-
-@keyframes projectCardsScroll {
-    from {
-        transform: translateY(50px);
-        opacity: 0.1;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
 }
 
 .projectImgContainer {
