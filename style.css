@@ -65,13 +65,13 @@ a {
 .cloud3 {
     position: absolute;
     left: 410px;
-    bottom: -286px;
+    bottom: 350px;
 }
 
 .cloud4 {
     position: absolute;
-    bottom: -750px;
-    right: 300px;
+    bottom: -150px;
+    right: 50px;
 }
 
 .cloud5 {
@@ -108,8 +108,7 @@ header {
     width: 60vw;
 
     background: rgba(255, 255, 255, 0.158);
-    backdrop-filter: blur(3px) saturate(160%);
-    -webkit-backdrop-filter: blur(3px) saturate(160%);
+    backdrop-filter: blur(2px) saturate(160%);
 
     border: 1px solid rgba(255, 255, 255, 0.174);
     border-radius: 50px;
@@ -339,7 +338,7 @@ header {
 .skills,
 .languages {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     flex-direction: column;
     position: relative;
     z-index: 10;
