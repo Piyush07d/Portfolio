@@ -1,5 +1,3 @@
-/* ================= SCROLL ANIMATION OBSERVER ================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
     const animatedSections = document.querySelectorAll(
@@ -23,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }, {
-        threshold: 0.45,
+        threshold: 0.25,
         rootMargin: "0px 0px -8% 0px"
     });
 
