@@ -1,3 +1,15 @@
+// Loading page
+
+const loader = document.querySelector('.barFill');
+const main = document.querySelector('.main');
+
+loader.addEventListener('animationend', () => {
+    document.querySelector('#loadingPage').style.display = 'none';
+    main.classList.add('show');
+});
+
+// Project cards animation
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const animatedSections = document.querySelectorAll(
@@ -35,3 +47,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
