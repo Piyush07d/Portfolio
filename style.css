@@ -1041,3 +1041,105 @@ header {
         filter: none;
     }
 }
+
+/* ================= SCROLL REVEAL ANIMATIONS ================= */
+
+/* ABOUT SECTION */
+#about .leftAboutsec,
+#about .rightAboutsec {
+    opacity: 0;
+    filter: drop-shadow(0 0 0px rgba(38, 82, 244, 0));
+    transform: translateY(45px);
+    transition:
+        opacity 0.9s ease,
+        transform 0.9s cubic-bezier(.2, .7, .2, 1),
+        filter 1s ease;
+}
+
+#about .rightAboutsec {
+    transition-delay: 0.15s;
+}
+
+#about.is-visible .leftAboutsec,
+#about.is-visible .rightAboutsec {
+    opacity: 1;
+    transform: translateY(0);
+    filter: drop-shadow(0 0 22px rgba(38, 82, 244, 0.28));
+}
+
+
+/* SKILLS SECTION */
+#skills .education,
+#skills .skills,
+#skills .languages {
+    opacity: 0;
+    transform: translateY(65px) scale(0.96);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s cubic-bezier(.2, .7, .2, 1);
+}
+
+#skills .education {
+    transition-delay: 0s;
+}
+
+#skills .skills {
+    transition-delay: 0.15s;
+}
+
+#skills .languages {
+    transition-delay: 0.3s;
+}
+
+#skills.is-visible .education,
+#skills.is-visible .skills,
+#skills.is-visible .languages {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+
+/* Project cards — deck dealing animation */
+
+.projectCard {
+    opacity: 0;
+    transform: translate(-90px, 45px) rotate(-12deg) scale(0.85);
+    transform-origin: bottom left;
+
+    transition:
+        opacity 0.65s ease,
+        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.projectCard.is-visible {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+}
+
+/* Deal cards sequentially from left to right */
+.projectCard:nth-child(1) {
+    transition-delay: 0s;
+}
+
+.projectCard:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.projectCard:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.projectCard:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .projectCard {
+        transform: translateY(55px) rotate(-5deg) scale(0.9);
+    }
+
+    .projectCard.is-visible {
+        transform: translateY(0) rotate(0deg) scale(1);
+    }
+}
