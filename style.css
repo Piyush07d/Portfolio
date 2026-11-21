@@ -417,6 +417,7 @@ header {
 
 .row-container1 {
     padding: 5px 0;
+    margin-bottom: 10px;
 }
 
 .row {
@@ -426,13 +427,19 @@ header {
 }
 
 .row-container2 {
-    padding: 3px 0;
+    padding: 5px 0;
     font-size: 1.1rem;
     font-weight: 550;
+    margin-bottom: 8px;
 }
 
 .langLogo {
-    height: 45px;
+    height: 35px;
+}
+
+.langp {
+    font-size: 11px;
+    color: var(--primary);
 }
 
 .logoContainer {
@@ -442,12 +449,13 @@ header {
 }
 
 .logoContainer span {
-    background-color: var(--primary);
+    background-color: rgba(255, 255, 255, 0.281);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    gap: 5px;
     align-items: center;
     flex-direction: column;
-    padding: 8px;
+    padding: 8px 8px 4px 8px;
     border-radius: 10px;
     color: black;
 }
